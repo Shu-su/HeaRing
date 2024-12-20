@@ -3,7 +3,8 @@
   <img width='300' src='https://github.com/user-attachments/assets/a52ab25a-7ea0-475a-9e44-27f1d7586c6d'>
   <img width='300' src='https://github.com/user-attachments/assets/5582a2e6-4ef8-44b7-93f7-4fe249de1714'><br><br>
   <b>치매 환자 발화패턴 학습 AI를 이용한 위험 상황 감지 및 실종 예방 도우미</b><br><br>
-  [시연 동영상🖥️](https://youtu.be/xleeRUj7p3w?si=wiYnkHHRQdZHpAik)<br><br>
+  <[시연 동영상🖥️](https://youtu.be/xleeRUj7p3w?si=wiYnkHHRQdZHpAik)<br><br>
+  [ㅇㅇ](https://www.youtube.com/watch?v=xleeRUj7p3w)
   팀원 소개⦁목적⦁주요 기능⦁인공지능⦁화면구성⦁시스템 구조⦁기술스택
 </p><br>
 
