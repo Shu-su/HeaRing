@@ -1,6 +1,9 @@
-# 헤아Ring
-한양여자대학교 캡스톤디자인 졸업작품 수제지능팀입니다.
-
+# 헤아Ring <img width='40' src='https://github.com/user-attachments/assets/392c1b85-d673-4cbc-b4c9-ba02f63a8abd'> 
+<p align='center'>
+  <img width='300' src='https://github.com/user-attachments/assets/a3c5d5b0-461f-4d1d-a422-9985d7db4b0e'>
+  
+  한양여자대학교 캡스톤디자인 졸업작품 수제지능팀입니다.
+</p>
 개발기간 : 2024.04 ~ 2024.11
 
 ## 팀원 소개
