@@ -1,10 +1,15 @@
-# 헤아Ring <img width='40' src='https://github.com/user-attachments/assets/392c1b85-d673-4cbc-b4c9-ba02f63a8abd'> 
+# 헤아Ring
 <p align='center'>
-  <img width='300' src='https://github.com/user-attachments/assets/a3c5d5b0-461f-4d1d-a422-9985d7db4b0e'>
-  
-  한양여자대학교 캡스톤디자인 졸업작품 수제지능팀입니다.
-</p>
-개발기간 : 2024.04 ~ 2024.11
+  <img width='300' src='https://github.com/user-attachments/assets/a52ab25a-7ea0-475a-9e44-27f1d7586c6d'>
+  <img width='300' src='https://github.com/user-attachments/assets/5582a2e6-4ef8-44b7-93f7-4fe249de1714'><br><br>
+  <b>치매 환자 발화패턴 학습 AI를 이용한 위험 상황 감지 및 실종 예방 도우미</b><br><br>
+  [시연 동영상🖥️](https://youtu.be/xleeRUj7p3w?si=wiYnkHHRQdZHpAik)<br><br>
+  팀원 소개⦁목적⦁주요 기능⦁인공지능⦁화면구성⦁시스템 구조⦁기술스택
+</p><br>
+
+> 한양여자대학교 캡스톤디자인 졸업작품 수제지능팀입니다.<br>
+> 개발기간 : 2024.04 ~ 2024.11
+<br>
 
 ## 팀원 소개
 |황혜진|오지현|전희주|옥지원|
