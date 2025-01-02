@@ -55,24 +55,22 @@
 - 추가적인 소형화 개발을 성공적으로 진행 하기 위한 Raspberry Pi Zero 2W  사용 고려
   - 제로 2W 부품은, 소형화 개발의 목표에 매우 적합한 장비였지만 성능이 떨어져 우리 팀이 개발해야하는 기능들이 원활하게 개발되어 작동될 것 같지 않다고 판단하였다
   <img src="https://github.com/user-attachments/assets/c0656d51-317a-461c-811a-fa7d4c78c6b4"  width="300" height="250"/>
-  <img src="https://github.com/user-attachments/assets/6c2b7438-e6ec-4728-88fd-f8f390e07d5e"  width="550" height="250"/>
+  <img src="https://github.com/user-attachments/assets/6c2b7438-e6ec-4728-88fd-f8f390e07d5e"  width="600" height="250"/>
   
-- 
-  -
 
-
-  
 ## 2. 개발 전 원격제어 환경 구성 방법 
 - SD 카드 리더기를 통한 SD 카드에 RaspberryImager 을 사용하여 64Bit OS 설치 진행
   - RaspberryImager 어플리케이션에서 Ctrl + Shift + X 키를 통해 OS의 아이디와 비밀번호를 설정하고, 연결할 네트워크의 아이디를 설정 한다.
-<img src="https://github.com/user-attachments/assets/e4d4dcf7-9a37-4db1-af6b-70ce49265895"  width="400" height="400"/>
+<img src="https://github.com/user-attachments/assets/e4d4dcf7-9a37-4db1-af6b-70ce49265895"  width="550" height="300"/>
+
+
 
 - 설치 후 SD 카드를 보드에 삽입 후 전원 연결
 - 전원 연결 후
   -  네트워크 연결을 통해 보드의 IP 주소를 알아내야 함 
 -  IP 주소를 알아냈다면, Putty를 사용해 접속하고 로그인한다.
--  
--  ![image](https://github.com/user-attachments/assets/b53d14a0-ce1e-4ce3-8462-73ba1eca0c3d)
+  <br> 
+<img src="https://github.com/user-attachments/assets/b53d14a0-ce1e-4ce3-8462-73ba1eca0c3d"  width="350" height="300"/> </br> 
 
 <table> 
 
