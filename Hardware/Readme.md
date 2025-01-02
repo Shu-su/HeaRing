@@ -56,7 +56,9 @@
   
 ## 2. 개발 전 원격제어 환경 구성 방법 
 - SD 카드 리더기를 통한 SD 카드에 RaspberryImager 을 사용하여 64Bit OS 설치 진행
-  - RaspberryImager 어플리케이션에서 Ctrl + Shift + X 키를 통해 OS의 아이디와 비밀번호를 설정하고, 연결할 네트워크의 아이디를 설정 한다. 
+  - RaspberryImager 어플리케이션에서 Ctrl + Shift + X 키를 통해 OS의 아이디와 비밀번호를 설정하고, 연결할 네트워크의 아이디를 설정 한다.
+    ![image](https://github.com/user-attachments/assets/e4d4dcf7-9a37-4db1-af6b-70ce49265895)
+
 - 설치 후 SD 카드를 보드에 삽입 후 전원 연결
 - 전원 연결 후
   -  네트워크 연결을 통해 보드의 IP 주소를 알아내야 함 
