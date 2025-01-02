@@ -64,6 +64,8 @@
 - 전원 연결 후
   -  네트워크 연결을 통해 보드의 IP 주소를 알아내야 함 
 -  IP 주소를 알아냈다면, Putty를 사용해 접속하고 로그인한다.
+-  ![image](https://github.com/user-attachments/assets/b53d14a0-ce1e-4ce3-8462-73ba1eca0c3d)
+
 <table> 
 
 
