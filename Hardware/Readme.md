@@ -43,14 +43,7 @@
        
             
     https://ko.aliexpress.com/item/1005006411600203.html?src=google&pdp_npi=4%40dis%21KRW%211880%211471%21%21%21%21%21%40%2112000037070277039%21ppc%21%21%21&src=google&albch=shopping&acnt=298-731-3000&isdl=y&slnk=&plac=&mtctp=&albbt=Google_7_shopping&aff_platform=google&aff_short_key=UneMJZVf&gclsrc=aw.ds&&albagn=888888&&ds_e_adid=&ds_e_matchtype=&ds_e_device=c&ds_e_network=x&ds_e_product_group_id=&ds_e_product_id=ko1005006411600203&ds_e_product_merchant_id=516326659&ds_e_product_country=KR&ds_e_product_language=ko&ds_e_product_channel=online&ds_e_product_store_id=&ds_url_v=2&albcp=21445427499&albag=&isSmbAutoCall=false&needSmbHouyi=false&gad_source=1&gclid=EAIaIQobChMIh4m69pnWigMVRtEWBR2etj3sEAQYASABEgItRvD_BwE
-  - <GPS 모듈>
-    - 구매 사이트 : https://www.devicemart.co.kr/goods/view?no=1342149
-   
-  - <충전 모듈> 
-    - 구매 사이트 : https://www.devicemart.co.kr/goods/view?no=12497514
-   
-  - <배터리>
-    - 구매 사이트 : https://www.devicemart.co.kr/goods/view?no=10889448
+
 
 - 추가적인 소형화 개발을 성공적으로 진행 하기 위한 Raspberry Pi Zero 2W  사용 고려
   - 제로 2W 부품은, 소형화 개발의 목표에 매우 적합한 장비였지만 성능이 떨어져 우리 팀이 개발해야하는 기능들이 원활하게 개발되어 작동될 것 같지 않다고 판단하였다
@@ -61,18 +54,36 @@
 ## 2. 개발 전 원격제어 환경 구성 방법 
 - SD 카드 리더기를 통한 SD 카드에 RaspberryImager 을 사용하여 64Bit OS 설치 진행
   - RaspberryImager 어플리케이션에서 Ctrl + Shift + X 키를 통해 OS의 아이디와 비밀번호를 설정하고, 연결할 네트워크의 아이디를 설정 한다.
+<br>
 <img src="https://github.com/user-attachments/assets/e4d4dcf7-9a37-4db1-af6b-70ce49265895"  width="550" height="300"/>
-
-
-
+<br>
+<br>
 - 설치 후 SD 카드를 보드에 삽입 후 전원 연결
 - 전원 연결 후
   -  네트워크 연결을 통해 보드의 IP 주소를 알아내야 함 
--  IP 주소를 알아냈다면, Putty를 사용해 접속하고 로그인한다.
-  <br> 
-<img src="https://github.com/user-attachments/assets/b53d14a0-ce1e-4ce3-8462-73ba1eca0c3d"  width="350" height="300"/> </br> 
+-  IP 주소를 알아냈다면, Putty를 사용해 접속하고 로그인한다.<br>
 
-<table> 
+<br> 
+<img src="https://github.com/user-attachments/assets/b53d14a0-ce1e-4ce3-8462-73ba1eca0c3d"  width="350" height="300"/>
 
+
+## 3. 사용한 센서 및 부가적인 부품 & 적용 방법 
+<br> 
+사용자의 위치를 실시간으로 판단하기위한 GPS <br> 
+
+<GPS 모듈><br> 
+구매 사이트 : https://www.devicemart.co.kr/goods/view?no=1342149
+<br>
+
+휴대용 기기 개발을 위한 충전 모듈 <br> 
+<충전 모듈> <br> 
+구매 사이트 : https://www.devicemart.co.kr/goods/view?no=12497514
+<br>
+
+충전 모듈에 맞는 배터리 <br>
+<배터리><br> 
+구매 사이트 : https://www.devicemart.co.kr/goods/view?no=10889448
+     <br> 
+    
 
 
