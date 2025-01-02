@@ -1,4 +1,9 @@
 # 소형 하드웨어 개발 진행과정 
+
+
+<img src="https://github.com/user-attachments/assets/fe76ecc5-ce4a-4b61-8515-3b4dd8951b2f" with="300", height="300"/>
+
+
 ### 1. 소형 하드웨어 장비 개발 동기 및 부품
 - 개발 동기
 - 개발 내용
