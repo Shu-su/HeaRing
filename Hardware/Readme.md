@@ -109,7 +109,9 @@
 
 ## 4. 하드웨어 로직 & 코드 작성 
 
-- 하드웨어 로직 (순서대로 기능 실행) 
+- 하드웨어 로직 
+ <img src="https://github.com/user-attachments/assets/09d35f88-b28a-4177-b155-022fbe457235"  width="600" height="600"/>
+
 
 
   1.Safe존 검출<br>
@@ -158,7 +160,7 @@
 -  앱에서 GPS화면을 들어오면, 실시간 위치 데이터 전송 <br> 
 
 
-  4. 병렬 실행  <br> 
+  5. 병렬 실행  <br> 
   - 여러 작업(녹음, 위치 전송, 서버 통신 등)을 동시에 수행. 
       - asyncio와 threading을 활용해 비동기 작업(WebSocket 통신 등)을 백그라운드에서 실행.
       - MQTT 클라이언트와 메인 로직은 독립적으로 실행.
@@ -180,7 +182,7 @@
       - 서버에서 위치 데이터의 전송 중단 요청이 들어오면 stop명령을 받고 위치 데이터 전송 중지
 
     
--  소스코드 
+## < 소스코드 >
 
 import time <br> 
 import json<br>
@@ -226,52 +228,50 @@ CHANNELS = 1<br>
 RATE = 44100<br> 
 BUCKET_NAME = "handmadeai"<br><br> 
 
-// Async Loop 설정<br> 
+#### Async Loop 설정<br> 
+---------------------------------------------------------------------------
+
 loop = asyncio.new_event_loop()<br> 
 
-// ---- Utility Functions ----<br> 
+#### ---- Utility Functions ----
+---------------------------------------------------------------------------
+
 <br> 
 def get_current_location():<br> 
-    """<br> 
-    GPS 모듈을 통해 현재 위치 데이터를 가져옵니다.<br> 
-    - 유효한 위치 데이터가 있으면 위도와 경도를 반환.<br> 
-    - 없으면 None 반환.<br> 
-    """<br> 
+    # GPS 모듈을 통해 현재 위치 데이터를 가져옵니다.<br> 
+    # 유효한 위치 데이터가 있으면 위도와 경도를 반환.<br> 
+    # 없으면 None 반환.<br> 
+
     try:<br> 
-        gpsd.connect()<br> 
-        packet = gpsd.get_current()<br> 
+        gpsd.connect()
+        packet = gpsd.get_current()
         if packet.mode >= 2:  // 2D fix available
-            return packet.position()  # 위도, 경도 반환<br> 
-        return None  # 유효하지 않은 데이터는 None<br> 
+            return packet.position()  # 위도, 경도 반환
+        return None  # 유효하지 않은 데이터는 None
     except Exception as e:
-        print(f"GPS 모듈 오류: {e}")<br> 
-        return None<br><br> 
+        print(f"GPS 모듈 오류: {e}")
+        return None
 
 def is_outside_safe_zone(current_lat, current_lon):<br> 
-    """<br> 
-    현재 위치가 Safe Zone을 벗어났는지 판단합니다.<br> 
-    - 벗어난 경우 True 반환.<br> 
-    """<br> 
+    # 현재 위치가 Safe Zone을 벗어났는지 판단합니다.<br> 
+    # 벗어난 경우 True 반환.<br> 
+    
     safe_location = (SAFE_LATITUDE, SAFE_LONGITUDE)<br> 
     current_location = (current_lat, current_lon)<br> 
     distance = geodesic(safe_location, current_location).km  // 거리 계산<br> 
     return distance > SAFE_RADIUS<br><br> 
 
 def send_status_to_server(status):<br> 
-    """<br> 
-    Safe Zone 상태(0 또는 1)를 서버에 전송합니다.<br> 
-    """<br> 
+    # Safe Zone 상태(0 또는 1)를 서버에 전송합니다.<br> 
     try:<br> 
         response = requests.put(API_URL, data=json.dumps(status), headers=HEADERS, timeout=5)<br> 
         if response.status_code == 200:<br> 
-            print(f"Server Response: {response.json()}") 
-    except requests.exceptions.RequestException as e:
-        print(f"Request error: {e}")
+            print(f"Server Response: {response.json()}"<br> 
+    except requests.exceptions.RequestException as e:<br> 
+        print(f"Request error: {e}")<br><br> 
 
-def upload_to_s3(local_file, bucket, s3_file, metadata):<br> 
-    """<br>
-    녹음 파일을 AWS S3에 업로드합니다.<br> 
-    """<br> 
+def upload_to_s3(local_file, bucket, s3_file, metadata):<br><br> 
+    # 녹음 파일을 AWS S3에 업로드합니다.<br><br> 
     s3 = boto3.client('s3')<br> 
     try:<br> 
         s3.upload_file(Filename=local_file, Bucket=bucket, Key=s3_file, ExtraArgs={"Metadata": metadata})<br> 
@@ -279,24 +279,19 @@ def upload_to_s3(local_file, bucket, s3_file, metadata):<br>
         print(f"S3 upload failed: {e}")<br><br> 
 
 def is_silent(data):<br> 
-    """<br> 
-    주어진 오디오 데이터가 무음인지 확인합니다.<br> 
-    """<br> 
+    #주어진 오디오 데이터가 무음인지 확인합니다.<br> 
     return np.abs(np.frombuffer(data, dtype=np.int16)).mean() < SILENCE_THRESHOLD<br> 
 
 def amplify_audio(frames, factor): 
-    """<br> 
-    오디오 데이터를 지정된 배율로 증폭합니다.
-    """<br> 
+    # 오디오 데이터를 지정된 배율로 증폭합니다.
+
     audio_data = np.frombuffer(b''.join(frames), dtype=np.int16)
     amplified_data = (audio_data * factor).astype(np.int16)
     return amplified_data.tobytes()
 
 def record_audio(wav_filename, mp3_filename, amplify_factor=1):
-    """<br> 
-    음성을 녹음하여 지정된 파일(WAV 및 MP3)에 저장합니다.<br> 
-    - 무음이 감지되면 녹음을 중지.<br> 
-    """<br> 
+    # 음성을 녹음하여 지정된 파일(WAV 및 MP3)에 저장합니다.<br> 
+    # 무음이 감지되면 녹음을 중지.<br> 
     audio = pyaudio.PyAudio()
     stream = audio.open(format=FORMAT, channels=CHANNELS, rate=RATE, input=True, frames_per_buffer=CHUNK)
 
@@ -321,7 +316,7 @@ def record_audio(wav_filename, mp3_filename, amplify_factor=1):
     stream.close()
     audio.terminate()
 
-    ## 녹음 데이터를 증폭하고 파일로 저장 
+    # 녹음 데이터를 증폭하고 파일로 저장 
     amplified_frames = amplify_audio(frames, amplify_factor)
     wf = wave.open(wav_filename, 'wb')
     wf.setnchannels(CHANNELS)
@@ -330,62 +325,226 @@ def record_audio(wav_filename, mp3_filename, amplify_factor=1):
     wf.writeframes(amplified_frames)
     wf.close()
 
-    ## WAV 파일을 MP3로 변환<br> 
+    # WAV 파일을 MP3로 변환<br> 
     audio_segment = AudioSegment.from_wav(wav_filename)
     audio_segment.export(mp3_filename, format="mp3") 
 
     return datetime.now()
 
-async def send_location_data(websocket):<br> 
-    """<br> 
-    현재 위치 데이터를 웹소켓을 통해 주기적으로 전송합니다.<br> 
-    """<br> 
-    while True:<br> 
-        location = get_current_location()
-        if location: 
-            data = {"action": "sendLocation", "latitude": location[0], "longitude": location[1]}
-            await websocket.send(json.dumps(data))
-        await asyncio.sleep(1)  # 1초 간격으로 위치 전송
+    
+#### 현재 스레드에 이벤트 루프 설정 , 이벤트 루프 무한정으로 실행 
+------------------------------------------------------------------------------------
+def start_loop():
+    asyncio.set_event_loop(loop) 
+    loop.run_forever() 
 
-async def start_websocket():<br> 
-    """<br> 
-    WebSocket 연결을 시작하고 초기 데이터를 전송합니다.<br> 
-    """<br> 
-    try:
-        async with websockets.connect(WS_URI) as websocket:
-            client_id_data = {"action": "clientId", "clientId": CLIENT_ID} 
-            await websocket.send(json.dumps(client_id_data)) 
-            await send_location_data(websocket) 
-    except Exception as e:<br> 
+    
+
+#### 별도의 스레드에서 이벤트 루프 실행  
+#### daemon=True: 데몬 스레드로 설정하여 메인 프로그램이 종료되면 이 스레드도 종료
+------------------------------------------------------------------------------------
+loop_thread = threading.Thread(target=start_loop, daemon=True) # 스레드 객체 생성 
+
+
+
+#### 스레드 시작 
+------------------------------------------------------------------------------------
+loop_thread.start() # 스레드 시작 
+
+
+
+#### MQTT 콜백 함수 
+---------------------------------------------------------------------------
+
+def on_connect(client, userdata, flags, rc): 
+    print(f"Connected to MQTT broker with result code {rc}")
+
+    
+#### MQTT 브로커에 연결되면 호출 
+---------------------------------------------------------------------------
+
+    client.subscribe(MQTT_TOPIC) 
+
+    
+#### 위에 설정한 특정 토픽을 구독하여 메세지 수신 
+-----------------------------------------------------------------------------
+
+
+def on_message(client, userdata, msg): # MQTT 메세지를 수신했을 때 호출됨 
+    global send_data
+    command = msg.payload.decode() # 메세지 페이로드를를 디코딩 해서 명령확인
+    print(f"=== Received MQTT command: {command} ===")
+
+    if command == "start":
+        print('Start 시작')
+        send_data = True
+        try:
+            #### 이벤트 루프 상태 확인
+            if not loop.is_running():
+                print("Error: 이벤트 루프가 실행 중이 아닙니다.")
+                return
+
+            #### 비동기 작업을 루프에 등록
+            future = asyncio.run_coroutine_threadsafe(start_websocket(), loop)
+            print('현재 루프에 작업 등록, Start 웹소켓 호출 ')
+
+            ### 결과 확인
+            result = future.result(timeout=5)  # 5초 내 결과 대기
+            print("start_websocket 실행 완료:", result)
+
+        except Exception as e:
+            print(f"start_websocket 실행 중 예외 발생: {e}")
+
+        except Exception as e:
+            print(f"Error during coroutine submission: {e}")
+
+    elif command == "stop":
+        print('Stop Succes')
+        send_data = False
+
+async def send_location_data(websocket):<br>
+    while send_data:<br>
+        location = get_current_location() # GPS에서 현재위치를 가져옴 <br>
+        print(location)<br>
+        if location:<br>
+            data = {<br>
+                "action": "sendLocation", <br>
+                "latitude": location[0],<br>
+                "longitude": location[1]<br>
+            }<br>
+            print(f"===== (10) 전송 location data: {data} =======")<br>
+            await websocket.send(json.dumps(data))<br>
+            print(f"======== (11) 웹소켓으로 데이터 전송 완료 ===== ")<br>
+            await asyncio.sleep(1)  # 1초마다 데이터 전송<br>
+        else:<br>
+            print("Unable to retrieve location data.")<br>
+            await asyncio.sleep(1)<br><br>
+
+
+####  WebSocket 연결을 통해 GPS 데이터를 실시간으로 전송하는 데 사용
+--------------------------------------------------------------------------------
+
+async def start_websocket():<br>
+    try:<br>
+        print(f"Connecting to WebSocket at {WS_URI}")<br>
+        async with websockets.connect(WS_URI) as websocket:<br>
+            # 클라이언트 ID를 처음으로 전송 서버와 연결된 후 클라이언트의 고유 ID를 서버에 전송함 <br>
+            client_id_data = {<br>
+                "action": "clientId",<br>
+                "clientId": CLIENT_ID,<br>
+            }<br>
+            print(f" 전송 client ID: {client_id_data}")<br>
+            await websocket.send(json.dumps(client_id_data)) #비동기적으로 데이터를 서버에 전송<br>
+            print('클라이언트 id 전송 완료')<br><br>
+
+            # 위치 데이터 전송 시작
+            await send_location_data(websocket)
+        print(" WebSocket 연결 시도 중  ")
+    except Exception as e: #예외처리 
         print(f"WebSocket 실행 중 예외 발생: {e}")
 
-// ---- Main ----<br> 
 
-if __name__ == "__main__":<br> 
-    loop_thread = threading.Thread(target=lambda: asyncio.run(loop.run_forever()), daemon=True)<br> 
-    loop_thread.start()<br><br> 
+if __name__ == "__main__":
+    # thread insert - with hj
+    loop_thread = threading.Thread(target=start_loop, daemon=True)      
+    loop_thread.start()
+    print(f"Loop initialized and running on thread: {loop_thread.name}")
 
+    before_status = None
     mqtt_client = mqtt.Client(client_id=CLIENT_ID)
-    mqtt_client.on_connect = lambda client, userdata, flags, rc: client.subscribe(MQTT_TOPIC) 
-    mqtt_client.on_message = lambda client, userdata, msg: None  # MQTT 명령 처리 추가 필요 
+    mqtt_client.on_connect = on_connect
+    mqtt_client.on_message = on_message
     mqtt_client.connect(MQTT_BROKER, MQTT_PORT, 60)
     mqtt_client.loop_start()
 
     while True:
-        location = get_current_location() 
-        if location:
-            lat, lon = location 
-            status = 0 if not is_outside_safe_zone(lat, lon) else 1 
-            send_status_to_server(status)
+        location = get_current_location()  # GPS 위치 가져오기
 
-            if status == 1:  # Safe Zone을 벗어난 경우 녹음 시작
-                time_str = datetime.now().strftime('%Y-%m-%d_%H-%M-%S') 
-                wav_file = f"{time_str}.wav"
-                mp3_file = f"{time_str}.mp3" 
-                record_audio(wav_file, mp3_file, amplify_factor=2) 
+        if location:  # 유효한 GPS 데이터 확인
+            lat, lon = location
+            print(f"Current location: Latitude {lat}, Longitude {lon}")
+
+            # Safe Zone 확인
+            is_safe = not is_outside_safe_zone(lat, lon)
+            status = 0 if is_safe else 1  # Safe Zone 안은 0, 밖은 1
         
 
 
+            # 상태가 변경되었을 때만 서버로 상태 전송
+            if before_status != status:
+                send_status_to_server(status)  # 서버로 상태 전송
+                before_status = status  # 상태 업데이트
 
+                if status == 1:  # Safe Zone 밖에서 녹음 시작
+                    print("Outside Safe Zone. Starting recording.")
+                    korea_tz = pytz.timezone('Asia/Seoul')
+                    current_time = datetime.now().astimezone(korea_tz)
+                    time_str = current_time.strftime('%Y-%m-%d_%H-%M-%S')
+                    wav_file = f"{time_str}.wav"
+                    mp3_file = f"{time_str}.mp3"              
+                    
+                    # 녹음 실행
+                    recording_start_time = record_audio(wav_file, mp3_file, amplify_factor=2)
 
+                    if recording_start_time:  # 녹음 시작 시간 정보가 있을 때만 실행
+                        # 타임스탬프 기반 파일 이름 생성
+                        korea_time = recording_start_time.astimezone(korea_tz)
+                        time_str = korea_time.strftime('%Y-%m-%d_%H-%M-%S')
+                        unique_wav_filename = f"{time_str}.wav"
+                        unique_mp3_filename = f"{time_str}.mp3"
+                        # 파일 이름 변경
+                        os.rename(wav_file, unique_wav_filename)
+                        os.rename(mp3_file, unique_mp3_filename)
 
+                        # 녹음 후 파일 존재 여부 확인 및 S3 전송
+                        if os.path.exists(unique_wav_filename) and os.path.exists(unique_mp3_filename):
+                            print(f"{unique_wav_filename} and {unique_mp3_filename} successfully created.")
+                            metadata = {
+                                "recording_time": korea_time.strftime('%Y-%m-%d %H:%M:%S KST'),
+                                "latitude": str(lat),
+                                "longitude": str(lon)
+                            }
+                            upload_to_s3(unique_mp3_filename, BUCKET_NAME, unique_mp3_filename, metadata)
+                            # 업로드 후 파일 삭제
+                            os.remove(unique_mp3_filename)
+                            os.remove(unique_wav_filename)
+                            print(f"Local files {unique_wav_filename} and {unique_mp3_filename} deleted.")
+                        else:
+                            print("File creation failed, no upload performed.")
+                    else:
+                        print("Recording failed, no valid start time.")
+            else:
+                # 상태가 변경되지 않았을 때 외부인지 확인하고, 외부일 경우 녹음을 계속 진행
+                if status == 1:  # Safe 존 밖
+                    print("Continuing to record since still outside Safe Zone.")
+                    recording_start_time = record_audio(wav_file, mp3_file, amplify_factor=2)
+
+                    if recording_start_time:  # 녹음 시작 시간 정보가 있을 때만 실행
+                        # 타임스탬프 기반 파일 이름 생성
+                        korea_time = recording_start_time.astimezone(korea_tz) if recording_start_time else "unknown"
+                        current_time_str = korea_time.strftime('%Y-%m-%d %H:%M:%S KST')
+                        metadata = {
+                            "recording_time": current_time_str,
+                            "latitude": str(lat),
+                            "longitude": str(lon)
+                        }
+                        upload_to_s3(mp3_file, BUCKET_NAME, mp3_file, metadata)
+
+                        # 업로드 후 파일 삭제
+                        os.remove(mp3_file)
+                        os.remove(wav_file)
+                        print(f"Local files {wav_file} and {mp3_file} deleted.")
+                    else:
+                        print("Recording failed, no valid start time.")
+                else:
+                    print("Inside Safe Zone. No recording or file creation, skipping upload and file deletion.")
+
+        else:
+            # GPS 데이터가 유효하지 않으면 상태 0 전송
+            print("GPS unavailable or invalid, sending status 0 to server.")
+            send_status_to_server(0)
+            print("Exiting program due to invalid GPS data.")
+            sys.exit(0)
+
+        # 딜레이 설정 (원하는 주기에 따라 조정)
+        time.sleep(60)  # 1분마다 체크 
