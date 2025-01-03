@@ -181,7 +181,52 @@
       - 서버에서 위치 데이터의 요청이 들어오면 start 명령을 받고 주기적으로 위치 데이터를 WebSocket 또는 MQTT를 통해 서버로 전송.
       - 서버에서 위치 데이터의 전송 중단 요청이 들어오면 stop명령을 받고 위치 데이터 전송 중지
 
-    
+## Numpy를 활용한 정확한 음성 추출 방법 
+-  녹음 중 무음이 삭제되어 음성이 끊겨 녹음이 진행되는 문제가 발생함
+  -  해결 방안
+    -  무음을 감지하는 is_silent() 함수의 사용 방법에 대해 문제를 바꿈<br>
+    기존 문제는 코드에서 is_silent() 함수는 오디오 데이터를 무음인지 판단하는 기준으로 사용되고 있다 <br>
+
+````
+if is_silent(data):
+    if recording:
+        silent_chunks += 1
+        if silent_chunks > int(RATE / CHUNK * SILENCE_DURATION):
+            print("Silence detected. Stopping recording.")
+            break
+    continue
+else:
+    silent_chunks = 0
+
+````
+- 이 로직에서 무음 구간이 감지되면, silent_chunks를 증가시키며 무음이 지정된 기간 이상 지속될 경우 녹음을 종료한다 
+- 무음 데이터(data)는 녹음 중인 프레임(frames)에 추가되지 않습니다. 따라서 녹음 파일에서는 무음 구간이 삭제된 결과가 나타난 것
+  - 무음을 "녹음 중지"의 신호로 간주<br> 
+    코드 구조상 무음 구간은 "녹음이 종료되는 신호"로 동작하고 있습니다. 무음 데이터가 프레임에 추가되지 않으므로 무음 구간이 사라지게 된다. 
+
+-  문제해결 방법
+  - < 무음 데이터도 프레임에 추가 > 
+무음 데이터(data)를 삭제하지 않고, 항상 frames에 추가되도록 수정함. 이렇게 하면 무음 구간도 녹음 파일에 포함되어 무음까지 감지되어 원본 녹음 파일을 저장할 수 있게 됨
+
+````
+if is_silent(data):
+    if recording:
+        silent_chunks += 1
+        if silent_chunks > int(RATE / CHUNK * SILENCE_DURATION):
+            print("Silence detected. Stopping recording.")
+            break
+    frames.append(data)  # 무음 데이터도 프레임에 추가
+else:
+    silent_chunks = 0
+    if not recording:
+        print("Sound detected. Starting recording.")
+        recording = True
+        recording_start_time = datetime.now()
+    frames.append(data)  # 소음 데이터도 프레임에 추가
+
+```` 
+
+
 ## < 소스코드 >
 
 import time <br> 
