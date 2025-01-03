@@ -231,12 +231,13 @@ BUCKET_NAME = "handmadeai"<br><br>
 #### Async Loop 설정<br> 
 ---------------------------------------------------------------------------
 
-loop = asyncio.new_event_loop()<br> 
+  loop = asyncio.new_event_loop()<br>
 
 #### ---- Utility Functions ----
 ---------------------------------------------------------------------------
 
 <br> 
+````
 def get_current_location():<br> 
     # GPS 모듈을 통해 현재 위치 데이터를 가져옵니다.<br> 
     # 유효한 위치 데이터가 있으면 위도와 경도를 반환.<br> 
