@@ -105,7 +105,8 @@
       -  geopy 라이브러리의 geodesic 함수를 이용해 현재 위치와 Safe Zone 중심의 거리를 계산.
          
         - 거리가 설정된 반경(SAFE_RADIUS)을 초과하면 Safe Zone을 벗어난 것으로 간주(is_outside_safe_zone).
-       
+
+
   2.safe존 상태 업데이트 및 서버 전송 <br> 
   - 사용자의 현재 상태(Safe Zone 내부: 0, 외출: 1)를 EC2서버에 전송.
       - requests 라이브러리를 사용하여 서버 API(API_URL)에 상태를 JSON 형식으로 전송 (RestFul API 활용) 
@@ -118,7 +119,8 @@
       - 녹음 시작: 음성 데이터 스트림에서 무음을 감지(is_silent 함수). 무음이 아닌 경우 녹음을 시작.
       - 녹음 종료1: 외부 소리가 감지되지않는다면 녹음을 진행하지않음. 소리를 계속 감지 
       - 녹음 종료2: 무음이 일정 시간 이상 지속되면 녹음을 중단.
-   
+
+
   
   - 데이터 처리: <br>
       1.녹음된 데이터를 증폭(amplify_audio).<br> 
@@ -137,6 +139,7 @@
           4. MQTT 클라이언트를 사용하여 브로커에 연결. <br>
           5. 특정 토픽(MQTT_TOPIC)에 데이터를 게시하거나 수신. <br>
 
+
           
 -  앱에서 GPS화면을 들어오면, 실시간 위치 데이터 전송 <br> 
 
@@ -145,6 +148,7 @@
   - 여러 작업(녹음, 위치 전송, 서버 통신 등)을 동시에 수행. 
       - asyncio와 threading을 활용해 비동기 작업(WebSocket 통신 등)을 백그라운드에서 실행.
       - MQTT 클라이언트와 메인 로직은 독립적으로 실행.
+
 
 
 6. 종합적인 워크플로우
@@ -185,7 +189,7 @@ import threading<br>
 import gpsd<br><br>
 
 // ---- Constants ----<br> 
-// 한양여대 정보문화관의 Safe Zone 좌표 및 반경 정의<br> 
+// 임의의 위치데이터로 Safe Zone 반경 정의<br> 
 SAFE_LATITUDE = 37.57302727371158<br> 
 SAFE_LONGITUDE = 126.9773387671158<br> 
 SAFE_RADIUS = 0.10  # Safe Zone 반경 (km)<br> 
@@ -222,10 +226,10 @@ def get_current_location():<br>
     try:<br> 
         gpsd.connect()<br> 
         packet = gpsd.get_current()<br> 
-        if packet.mode >= 2:  // 2D fix available<br> 
+        if packet.mode >= 2:  // 2D fix available
             return packet.position()  # 위도, 경도 반환<br> 
         return None  # 유효하지 않은 데이터는 None<br> 
-    except Exception as e:<br> 
+    except Exception as e:
         print(f"GPS 모듈 오류: {e}")<br> 
         return None<br><br> 
 
@@ -246,9 +250,9 @@ def send_status_to_server(status):<br>
     try:<br> 
         response = requests.put(API_URL, data=json.dumps(status), headers=HEADERS, timeout=5)<br> 
         if response.status_code == 200:<br> 
-            print(f"Server Response: {response.json()}")<br> 
-    except requests.exceptions.RequestException as e:<br> 
-        print(f"Request error: {e}")<br><br> 
+            print(f"Server Response: {response.json()}") 
+    except requests.exceptions.RequestException as e:
+        print(f"Request error: {e}")
 
 def upload_to_s3(local_file, bucket, s3_file, metadata):<br> 
     """<br>
@@ -266,80 +270,80 @@ def is_silent(data):<br>
     """<br> 
     return np.abs(np.frombuffer(data, dtype=np.int16)).mean() < SILENCE_THRESHOLD<br> 
 
-def amplify_audio(frames, factor):<br> 
+def amplify_audio(frames, factor): 
     """<br> 
-    오디오 데이터를 지정된 배율로 증폭합니다.<br> 
+    오디오 데이터를 지정된 배율로 증폭합니다.
     """<br> 
-    audio_data = np.frombuffer(b''.join(frames), dtype=np.int16)<br> 
-    amplified_data = (audio_data * factor).astype(np.int16)<br> 
-    return amplified_data.tobytes()<br><br> 
+    audio_data = np.frombuffer(b''.join(frames), dtype=np.int16)
+    amplified_data = (audio_data * factor).astype(np.int16)
+    return amplified_data.tobytes()
 
-def record_audio(wav_filename, mp3_filename, amplify_factor=1):<br> 
+def record_audio(wav_filename, mp3_filename, amplify_factor=1):
     """<br> 
     음성을 녹음하여 지정된 파일(WAV 및 MP3)에 저장합니다.<br> 
     - 무음이 감지되면 녹음을 중지.<br> 
     """<br> 
-    audio = pyaudio.PyAudio()<br> 
-    stream = audio.open(format=FORMAT, channels=CHANNELS, rate=RATE, input=True, frames_per_buffer=CHUNK)<br><br> 
+    audio = pyaudio.PyAudio()
+    stream = audio.open(format=FORMAT, channels=CHANNELS, rate=RATE, input=True, frames_per_buffer=CHUNK)
 
-    frames = []<br> 
-    silent_chunks = 0<br> 
-    recording = False<br> <br> 
+    frames = []
+    silent_chunks = 0
+    recording = False
 
-    while True:<br> 
-        data = stream.read(CHUNK)<br> 
-        if is_silent(data):  # 무음인지 확인<br> 
-            if recording:<br> 
-                silent_chunks += 1<br> 
-                if silent_chunks > int(RATE / CHUNK * SILENCE_DURATION):<br> 
-                    break  # 무음 지속 시간이 초과되면 녹음 중지<br> 
-            frames.append(data)<br> 
-        else:  # 소음이 감지되면 녹음 시작<br> 
-            silent_chunks = 0<br> 
-            recording = True<br> 
-            frames.append(data)<br><br> 
+    while True:
+        data = stream.read(CHUNK)
+        if is_silent(data):  # 무음인지 확인
+            if recording:
+                silent_chunks += 1 
+                if silent_chunks > int(RATE / CHUNK * SILENCE_DURATION):
+                    break  # 무음 지속 시간이 초과되면 녹음 중지
+            frames.append(data)
+        else:  # 소음이 감지되면 녹음 시작
+            silent_chunks = 0
+            recording = True
+            frames.append(data)
 
-    stream.stop_stream()<br> 
-    stream.close()<br> 
-    audio.terminate()<br><br> 
+    stream.stop_stream()
+    stream.close()
+    audio.terminate()
 
-    ## 녹음 데이터를 증폭하고 파일로 저장<br> 
-    amplified_frames = amplify_audio(frames, amplify_factor)<br> 
-    wf = wave.open(wav_filename, 'wb')<br> 
-    wf.setnchannels(CHANNELS)<br> 
-    wf.setsampwidth(audio.get_sample_size(FORMAT))<br> 
-    wf.setframerate(RATE)<br> 
-    wf.writeframes(amplified_frames)<br> 
-    wf.close()<br><br> 
+    ## 녹음 데이터를 증폭하고 파일로 저장 
+    amplified_frames = amplify_audio(frames, amplify_factor)
+    wf = wave.open(wav_filename, 'wb')
+    wf.setnchannels(CHANNELS)
+    wf.setsampwidth(audio.get_sample_size(FORMAT))
+    wf.setframerate(RATE)
+    wf.writeframes(amplified_frames)
+    wf.close()
 
     ## WAV 파일을 MP3로 변환<br> 
-    audio_segment = AudioSegment.from_wav(wav_filename)<br>
-    audio_segment.export(mp3_filename, format="mp3")<br><br> 
+    audio_segment = AudioSegment.from_wav(wav_filename)
+    audio_segment.export(mp3_filename, format="mp3") 
 
-    return datetime.now()<br> 
+    return datetime.now()
 
 async def send_location_data(websocket):<br> 
     """<br> 
     현재 위치 데이터를 웹소켓을 통해 주기적으로 전송합니다.<br> 
     """<br> 
     while True:<br> 
-        location = get_current_location()<br> 
-        if location:<br> 
-            data = {"action": "sendLocation", "latitude": location[0], "longitude": location[1]}<br> 
-            await websocket.send(json.dumps(data))<br> 
-        await asyncio.sleep(1)  # 1초 간격으로 위치 전송<br> <br> 
+        location = get_current_location()
+        if location: 
+            data = {"action": "sendLocation", "latitude": location[0], "longitude": location[1]}
+            await websocket.send(json.dumps(data))
+        await asyncio.sleep(1)  # 1초 간격으로 위치 전송
 
 async def start_websocket():<br> 
     """<br> 
     WebSocket 연결을 시작하고 초기 데이터를 전송합니다.<br> 
     """<br> 
-    try:<br> 
-        async with websockets.connect(WS_URI) as websocket:<br> 
-            client_id_data = {"action": "clientId", "clientId": CLIENT_ID}<br> 
-            await websocket.send(json.dumps(client_id_data))<br> 
-            await send_location_data(websocket)<br> 
+    try:
+        async with websockets.connect(WS_URI) as websocket:
+            client_id_data = {"action": "clientId", "clientId": CLIENT_ID} 
+            await websocket.send(json.dumps(client_id_data)) 
+            await send_location_data(websocket) 
     except Exception as e:<br> 
-        print(f"WebSocket 실행 중 예외 발생: {e}")<br> <br> 
+        print(f"WebSocket 실행 중 예외 발생: {e}")
 
 // ---- Main ----<br> 
 
@@ -347,24 +351,24 @@ if __name__ == "__main__":<br>
     loop_thread = threading.Thread(target=lambda: asyncio.run(loop.run_forever()), daemon=True)<br> 
     loop_thread.start()<br><br> 
 
-    mqtt_client = mqtt.Client(client_id=CLIENT_ID)<br> 
-    mqtt_client.on_connect = lambda client, userdata, flags, rc: client.subscribe(MQTT_TOPIC)<br> 
-    mqtt_client.on_message = lambda client, userdata, msg: None  # MQTT 명령 처리 추가 필요<br> 
-    mqtt_client.connect(MQTT_BROKER, MQTT_PORT, 60)<br> 
-    mqtt_client.loop_start()<br><br> 
+    mqtt_client = mqtt.Client(client_id=CLIENT_ID)
+    mqtt_client.on_connect = lambda client, userdata, flags, rc: client.subscribe(MQTT_TOPIC) 
+    mqtt_client.on_message = lambda client, userdata, msg: None  # MQTT 명령 처리 추가 필요 
+    mqtt_client.connect(MQTT_BROKER, MQTT_PORT, 60)
+    mqtt_client.loop_start()
 
-    while True:<br> 
-        location = get_current_location()<br> 
-        if location:<br> 
-            lat, lon = location<br> 
-            status = 0 if not is_outside_safe_zone(lat, lon) else 1<br> 
-            send_status_to_server(status)<br><br> 
+    while True:
+        location = get_current_location() 
+        if location:
+            lat, lon = location 
+            status = 0 if not is_outside_safe_zone(lat, lon) else 1 
+            send_status_to_server(status)
 
-            if status == 1:  # Safe Zone을 벗어난 경우 녹음 시작<br> 
-                time_str = datetime.now().strftime('%Y-%m-%d_%H-%M-%S')<br> 
-                wav_file = f"{time_str}.wav"<br> 
-                mp3_file = f"{time_str}.mp3"<br> 
-                record_audio(wav_file, mp3_file, amplify_factor=2)<br> 
+            if status == 1:  # Safe Zone을 벗어난 경우 녹음 시작
+                time_str = datetime.now().strftime('%Y-%m-%d_%H-%M-%S') 
+                wav_file = f"{time_str}.wav"
+                mp3_file = f"{time_str}.mp3" 
+                record_audio(wav_file, mp3_file, amplify_factor=2) 
         
 
 
