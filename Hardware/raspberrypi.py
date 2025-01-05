@@ -232,7 +232,6 @@ async def start_websocket():
 
 
 if __name__ == "__main__":
-    # thread insert - with hj
     loop_thread = threading.Thread(target=start_loop, daemon=True)      
     loop_thread.start()
     print(f"Loop initialized and running on thread: {loop_thread.name}")
