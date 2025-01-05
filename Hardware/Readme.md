@@ -104,6 +104,12 @@
   - <배터리>
     - 구매 사이트 :  https://www.devicemart.co.kr/goods/view?no=10889448
 
+- 부품 조립 후 사진 
+
+<img src="https://github.com/user-attachments/assets/70962858-9c5e-4720-96e8-9acc6fc646f0"  width="400" height="300"/>
+<img src="https://github.com/user-attachments/assets/154d7e51-22e2-44b6-95ca-ac5e447e2ff5"  width="400" height="300"/>
+
+
 
 
 ## 4. 하드웨어 로직 & 코드 작성 
