@@ -15,7 +15,7 @@
 ## 팀원 소개
 |황혜진|오지현|전희주|옥지원|
 |------|---|---|---|
-||<p align='center'><img width="150" src="https://github.com/user-attachments/assets/e9a46cb4-4612-4b84-be03-013c4489f766"></p>|이미지|<p align='center'><img width="150" src="https://github.com/user-attachments/assets/e9a46cb4-4612-4b84-be03-013c4489f766"></p>|
+||<p align='center'><img width="150" src="https://github.com/user-attachments/assets/e9a46cb4-4612-4b84-be03-013c4489f766"></p>|이미지|<p align='center'><img width="150" src="https://github.com/user-attachments/assets/b05a0bb5-62c8-4c09-bf6b-e331f6521b9d"></p>|
 |<p align='center'>[@Shu-su](https://github.com/Shu-su)</p>|<p align='center'>[@hynzio](https://github.com/hynzio)</p>|[@heeeeeeee2](https://github.com/heeeeeeee2)|[@jiwon102](https://github.com/jiwon102)
 |테스트1|테스트2|테스트3|테스트3|
 
