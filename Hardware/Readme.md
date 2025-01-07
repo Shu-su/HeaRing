@@ -6,11 +6,10 @@
 
 ## 목차
 1. [프로젝트 개요](#1.개요)
-2. [소형 하드웨어 개발 동기](#2)
-3. [원격제어 환경 구성](#3)
-4. [사용 부품 및 조립 방법](#4)
-5. [하드웨어 로직 및 코드](#5)
-6. [결론](#6)
+2. [개발 전 원격제어 환경 구성](#3)
+3. [사용한 센서 및 부가적인 부품 & 적용 방법 ](#4)
+4. [하드웨어 로직 & 코드 구성 및 이슈해결 방법 ](#)
+5. [결론](#5)
 
 
 ### 1. 개요
@@ -79,24 +78,37 @@
 -  보드 환경 설정 
 1. SD 카드 환경설정 
   - RaspberryImager 어플리케이션에서 64Bit OS 설치 진행
-  - Ctrl + Shift + X 키를 통해 OS의 아이디와 비밀번호를 설정하고, 연결할 네트워크의 아이디를 설정
-<br>
 <img src="https://github.com/user-attachments/assets/e4d4dcf7-9a37-4db1-af6b-70ce49265895"  width="550" height="300"/>
-<br>
-<br>
+
+  - Ctrl + Shift + X 키를 통해 OS의 아이디와 비밀번호를 설정하고, 연결할 네트워크의 아이디를 설정
+
 
 2. 전원 연결 
 - 전원 연결 후 작성한 네트워크 설정했던 내용을 기반으로 네트워크 연결을 통해 보드의 IP 주소를 알아내기
 - IP 주소를 기반으로 Putty를 사용해 보드에 접속하고 로그인한다.<br>
-  <b
-
 <br> 
 <img src="https://github.com/user-attachments/assets/b53d14a0-ce1e-4ce3-8462-73ba1eca0c3d"  width="350" height="300"/>
+<br>
+<img src="https://github.com/user-attachments/assets/57a9776b-6bc8-4ace-b9b3-e05494e261ca" width="550" height="300"/>
+<br>
+<img src="https://github.com/user-attachments/assets/ad019c5b-1a79-41c1-b147-82f507a99744"  width="550" height="300"/>
 
--  VNC 설정
--  
- <사진> 
-  - 한국어 설정
+
+<br> 
+-  VNC 설정<br>
+
+```
+>> 업데이트 코드 sudo apt-get update
+>> 업데이트 목록 다운로드 sudo apt-get update
+```
+
+
+```
+>> 종료 시 작성 코드 sudo shutdown –h now or sudo shutdown now
+```
+
+
+- 한국어설정 
     
 ```
 >> 한글 폰트 다운로드 명령어  입력  sudo apt install fonts-nanum
@@ -108,12 +120,81 @@
 
 ```
 메뉴에서 Configuration 에서 Locale, Timezone 설정 후  Language와 Character Set 설정해주고 재부팅 
+<img src="https://github.com/user-attachments/assets/e0475a3f-8997-41f4-bdcf-283a504f17f9"  width="550" height="300"/>
 
 
 
-  -  
--  자주 사용하는 Linux 명령어
--  
+### 자주 사용하는 Linux 명령어
+  -  라즈베리파이 시스템 정보 및 상태 확인<br>
+
+```
+hostname          # 라즈베리파이의 호스트 이름 확인
+uname -a          # 커널 정보와 시스템 정보 확인
+vcgencmd measure_temp  # CPU 온도 확인
+vcgencmd get_mem arm   # 사용 가능한 ARM 메모리 확인
+vcgencmd get_mem gpu   # GPU 메모리 확인
+df -h             # 디스크 사용량 확인
+free -h           # 메모리 사용량 확인
+uptime            # 시스템 가동 시간 확인
+whoami            # 현재 사용자 확인
+```
+
+
+  -  라즈베리파이 네트워크 관리<br>
+```
+ifconfig          # 네트워크 인터페이스 정보 확인
+iwconfig          # 무선 네트워크 설정 확인
+ping <주소>       # 네트워크 연결 확인
+sudo iwlist wlan0 scan  # 사용 가능한 Wi-Fi 네트워크 검색
+sudo nano /etc/wpa_supplicant/wpa_supplicant.conf  # Wi-Fi 설정 파일 편집
+sudo systemctl restart dhcpcd  # 네트워크 서비스 재시작
+```
+  -  라즈베리파이 패키지 관리<br>
+```
+sudo apt update               # 패키지 목록 업데이트
+sudo apt upgrade              # 설치된 패키지 업그레이드
+sudo apt install <패키지명>   # 패키지 설치
+sudo apt remove <패키지명>    # 패키지 제거
+sudo apt autoremove           # 필요 없는 패키지 제거
+dpkg -l                       # 설치된 패키지 목록 확인
+```
+
+
+  -  라즈베리파이 파일 및 디렉토리 관리<br>
+```
+ls                 # 현재 디렉토리의 파일 및 폴더 목록 확인
+ls -la             # 숨김 파일 포함 자세한 정보 표시
+cd <디렉토리명>    # 디렉토리 이동
+pwd                # 현재 작업 디렉토리 확인
+mkdir <디렉토리명> # 디렉토리 생성
+rm <파일명>        # 파일 삭제
+rm -r <폴더명>     # 폴더 및 하위 파일 삭제
+cp <원본> <대상>   # 파일 복사
+mv <원본> <대상>   # 파일 이동/이름 변경
+```
+
+
+  -  라즈베리파이 시스템 관리<br>
+```
+sudo reboot                 # 시스템 재부팅
+sudo shutdown now           # 시스템 즉시 종료
+sudo shutdown -r now        # 즉시 재부팅
+sudo raspi-config           # 라즈베리파이 설정 메뉴 열기
+sudo systemctl start <서비스>   # 서비스 시작
+sudo systemctl stop <서비스>    # 서비스 중지
+sudo systemctl restart <서비스> # 서비스 재시작
+```
+
+  -  라즈베리파이 개발 및 디버깅 <br>
+```
+python3 <스크립트명>.py  # Python3 스크립트 실행
+sudo nano <파일명>       # 텍스트 파일 편집
+cat <파일명>            # 파일 내용 확인
+tail -f <로그 파일명>   # 실시간 로그 확인
+dmesg                   # 부팅 및 커널 메시지 확인
+```
+
+
 ## 3. 개발 시 사용한 부품 & 적용 방법 
 
 
@@ -163,8 +244,7 @@
   - 사용자가 직접 지정한 Safe Zone 반경을 기준으로  1분마다 사용자가 벗어난 상태인지 확인.
       - 사용자가 직접 지정한 Safe Zone 반경을 기준으로 사용자가 벗어난 상태인지 확인.
       -  GPS 모듈(gpsd)을 사용하여 현재 위치 데이터를 수집.
-      -  geopy 라이브러리의 geodesic 함수를 이용해 현재 위치와 Safe Zone 중심의 거리를 계산.
-         
+      -  geopy 라이브러리의 geodesic 함수를 이용해 현재 위치와 Safe Zone 중심의 거리를 계산.  
         - 거리가 설정된 반경(SAFE_RADIUS)을 초과하면 Safe Zone을 벗어난 것으로 간주(is_outside_safe_zone).
 
 
@@ -174,19 +254,20 @@
       - Safe Zone 외부 상태에서는 외출로 판단 하여 사용자의 앱에 외출 알림을 전송 함
       - 1분마다 safe존 여부를 판단 할 때, 직전 상태값이 현재 상태값과 같다면 전송하지않음<br> 
 
+<br> 
 
   3.음성 녹음 및 처리 <br>
   - Safe Zone을 벗어난 경우, 음성을 녹음하고 저장하여 클라우드(AWS S3)에 업로드
       - 녹음 시작: 음성 데이터 스트림에서 무음을 감지(is_silent 함수). 무음이 아닌 경우 녹음을 시작.
       - 녹음 종료1: 외부 소리가 감지되지않는다면 녹음을 진행하지않음. 소리를 계속 감지 
-      - 녹음 종료2: 무음이 일정 시간 이상 지속되면 녹음을 중단.
-
+      - 녹음 종료2: 무음이 일정 시간 이상 지속되면 녹음을 중단<br>
 
       1.녹음된 데이터를 증폭(amplify_audio).<br> 
       2. WAV 파일로 저장 후 MP3 형식으로 변환(pydub). <br> 
       3. 클라우드 업로드 <br> 
       4. AWS S3에 녹음 파일을 업로드(upload_to_s3). <br> 
       5. 메타데이터로 녹음 당시의 시간 및 위치 정보 포함. <br>
+<br> 
 
 
   4.실시간 위치 데이터 전송  <br> 
@@ -197,6 +278,8 @@
           3. MQTT 통신 <br>
           4. MQTT 클라이언트를 사용하여 브로커에 연결. <br>
           5. 특정 토픽(MQTT_TOPIC)에 데이터를 게시하거나 수신. <br>
+
+<br> 
 
 6. 종합적인 워크플로우
   - 위치 확인:
