@@ -230,6 +230,11 @@ dmesg                   # 부팅 및 커널 메시지 확인
   - <배터리>
     - 구매 사이트 :  https://www.devicemart.co.kr/goods/view?no=10889448
 
+  - <쿨링 케이스>
+    //튼튼하고 좋았던 케이스 쿨링팬이 두개나 들어가있어서 열회전률이 좋다. 최종 사진에는 첨부되어있지않음. <br>
+    
+    - 구매사이트 : https://www.icbanq.com/P008890303?utm_source=google&utm_medium=cpc&utm_campaign=%EC%87%BC%ED%95%91_%EC%A2%85%ED%95%A9&utm_id=%EC%87%BC%ED%95%91_%EC%A2%85%ED%95%A9&utm_term=notset&utm_content=%EC%87%BC%ED%95%91_%EC%A2%85%ED%95%A9&gad_source=1&gclid=CjwKCAiAm-67BhBlEiwAEVftNv5RHoXcFabAq3g__s4Hs3WGbJ2BSN4SGltQBqX32d5kHumnV80bwBoCJTUQAvD_BwE
+
 - 부품 조립 후 사진 
 
 <img src="https://github.com/user-attachments/assets/70962858-9c5e-4720-96e8-9acc6fc646f0"  width="400" height="300"/>
