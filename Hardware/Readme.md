@@ -2,7 +2,11 @@
 
 
 <img src="https://github.com/user-attachments/assets/fe76ecc5-ce4a-4b61-8515-3b4dd8951b2f"  width="300" height="300"/>
-
+1.[개요](#1-개요)
+2.[개발 전 원격제어 환경 구성 방법](#2-개발-전-원격제어-환경-구성-방법)
+3.[개발시 사용한 부품과 적용 방법](#3-개발시-사용한-부품과-적용-방법) 
+4.[하드웨어 로직 구성](#4-하드웨어-로직-구성)
+5.[결론](#5-결론)
 
 ### 1. 개요
 - 개발 동기
@@ -130,10 +134,10 @@
 
 
 
-### 자주 사용하는 Linux 명령어
+### 자주 사용하는 linux 명령어
   -  라즈베리파이 시스템 정보 및 상태 확인<br>
 
-```linux
+```
 hostname          # 라즈베리파이의 호스트 이름 확인
 uname -a          # 커널 정보와 시스템 정보 확인
 vcgencmd measure_temp  # CPU 온도 확인
@@ -147,7 +151,7 @@ whoami            # 현재 사용자 확인
 
 
   -  라즈베리파이 네트워크 관리 <br>
-```linux
+```
 ifconfig          # 네트워크 인터페이스 정보 확인
 iwconfig          # 무선 네트워크 설정 확인
 ping <주소>       # 네트워크 연결 확인
@@ -156,7 +160,7 @@ sudo nano /etc/wpa_supplicant/wpa_supplicant.conf  # Wi-Fi 설정 파일 편집
 sudo systemctl restart dhcpcd  # 네트워크 서비스 재시작
 ```
   -  라즈베리파이 패키지 관리<br>
-```linux
+```
 sudo apt update               # 패키지 목록 업데이트
 sudo apt upgrade              # 설치된 패키지 업그레이드
 sudo apt install <패키지명>   # 패키지 설치
@@ -167,7 +171,7 @@ dpkg -l                       # 설치된 패키지 목록 확인
 
 
   -  라즈베리파이 파일 및 디렉토리 관리<br>
-```linux 
+```
 ls                 # 현재 디렉토리의 파일 및 폴더 목록 확인
 ls -la             # 숨김 파일 포함 자세한 정보 표시
 cd <디렉토리명>    # 디렉토리 이동
@@ -181,7 +185,7 @@ mv <원본> <대상>   # 파일 이동/이름 변경
 
 
   -  라즈베리파이 시스템 관리<br>
-```linux
+```
 sudo reboot                 # 시스템 재부팅
 sudo shutdown now           # 시스템 즉시 종료
 sudo shutdown -r now        # 즉시 재부팅
@@ -192,7 +196,7 @@ sudo systemctl restart <서비스> # 서비스 재시작
 ```
 
   -  라즈베리파이 개발 및 디버깅 <br>
-```linux 
+```
 python3 <스크립트명>.py  # Python3 스크립트 실행
 sudo nano <파일명>       # 텍스트 파일 편집
 cat <파일명>            # 파일 내용 확인
@@ -201,7 +205,7 @@ dmesg                   # 부팅 및 커널 메시지 확인
 ```
 
 
-## 3. 개발 시 사용한 부품과 적용 방법 
+## 3. 개발시 사용한 부품과 적용 방법 
 
 
 - 필요한 부품 :     
@@ -242,7 +246,7 @@ dmesg                   # 부팅 및 커널 메시지 확인
 
 
 
-## 4. 하드웨어 로직 & 코드 작성 
+## 4. 하드웨어 로직 구성 
 
 - 전체적인 하드웨어 로직 
  <img src="https://github.com/user-attachments/assets/09d35f88-b28a-4177-b155-022fbe457235"  width="600" height="600"/>
