@@ -169,7 +169,7 @@ def on_connect(client, userdata, flags, rc):
 def on_message(client, userdata, msg):
     global send_data
     command = msg.payload.decode()
-    print(f"=== Received MQTT command: {command} ===")
+    print(f" Received MQTT command: {command} ")
 
     if command == "start":
         send_data = True
@@ -197,7 +197,6 @@ def on_message(client, userdata, msg):
 
 
 async def send_location_data(websocket):
-    print('====== (8) Send Location Data 코드 실행 ===== ')
     while send_data:
         location = get_current_location()
         if location:
