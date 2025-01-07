@@ -87,6 +87,10 @@
 
 2. 전원 연결 
 - 전원 연결 후 작성한 네트워크 설정했던 내용을 기반으로 네트워크 연결을 통해 보드의 IP 주소를 알아내기
+  - 기존 Raspberrypi imager 을 설치 후 작성 했던 네트워크 아이디와 같은 네트워크를 연결 한다.
+  - 연결 된 네트워크의 IP주소를 확인 한다
+    <br>
+    
 - IP 주소를 기반으로 Putty를 사용해 보드에 접속하고 로그인한다.<br>
 <br> 
 <img src="https://github.com/user-attachments/assets/b53d14a0-ce1e-4ce3-8462-73ba1eca0c3d"  width="350" height="300"/>
@@ -143,7 +147,7 @@ whoami            # 현재 사용자 확인
 
 
   -  라즈베리파이 네트워크 관리 <br>
-```Linux 
+```linux
 ifconfig          # 네트워크 인터페이스 정보 확인
 iwconfig          # 무선 네트워크 설정 확인
 ping <주소>       # 네트워크 연결 확인
@@ -152,7 +156,7 @@ sudo nano /etc/wpa_supplicant/wpa_supplicant.conf  # Wi-Fi 설정 파일 편집
 sudo systemctl restart dhcpcd  # 네트워크 서비스 재시작
 ```
   -  라즈베리파이 패키지 관리<br>
-```Linux
+```linux
 sudo apt update               # 패키지 목록 업데이트
 sudo apt upgrade              # 설치된 패키지 업그레이드
 sudo apt install <패키지명>   # 패키지 설치
@@ -163,7 +167,7 @@ dpkg -l                       # 설치된 패키지 목록 확인
 
 
   -  라즈베리파이 파일 및 디렉토리 관리<br>
-```Linux
+```linux 
 ls                 # 현재 디렉토리의 파일 및 폴더 목록 확인
 ls -la             # 숨김 파일 포함 자세한 정보 표시
 cd <디렉토리명>    # 디렉토리 이동
@@ -177,7 +181,7 @@ mv <원본> <대상>   # 파일 이동/이름 변경
 
 
   -  라즈베리파이 시스템 관리<br>
-```Linux
+```linux
 sudo reboot                 # 시스템 재부팅
 sudo shutdown now           # 시스템 즉시 종료
 sudo shutdown -r now        # 즉시 재부팅
@@ -188,7 +192,7 @@ sudo systemctl restart <서비스> # 서비스 재시작
 ```
 
   -  라즈베리파이 개발 및 디버깅 <br>
-```Linux
+```linux 
 python3 <스크립트명>.py  # Python3 스크립트 실행
 sudo nano <파일명>       # 텍스트 파일 편집
 cat <파일명>            # 파일 내용 확인
@@ -205,15 +209,13 @@ dmesg                   # 부팅 및 커널 메시지 확인
 
   - <라즈베리파이4>  라즈베리파이4보드 8GB 및 충전기, 쿨링 팬 케이스, SD 카드 32GB , SD 카드 리더기
 
-```
+
     - 구매 사이트 : https://www.coupang.com/vp/products/7429911069?itemId=19294690189&vendorItemId=86409354176
-```
+
   - <소형 마이크>
     - 구매 사이트 : 슈퍼 미니 USB 2.0 마이크, 휴대용 스튜디오 음성 마이크, 오디오 어댑터 드라이버, 노트북, PC, MSN, 스카이프용, 신제품
        
-```
     https://ko.aliexpress.com/item/1005006411600203.html?src=google&pdp_npi=4%40dis%21KRW%211880%211471%21%21%21%21%21%40%2112000037070277039%21ppc%21%21%21&src=google&albch=shopping&acnt=298-731-3000&isdl=y&slnk=&plac=&mtctp=&albbt=Google_7_shopping&aff_platform=google&aff_short_key=UneMJZVf&gclsrc=aw.ds&&albagn=888888&&ds_e_adid=&ds_e_matchtype=&ds_e_device=c&ds_e_network=x&ds_e_product_group_id=&ds_e_product_id=ko1005006411600203&ds_e_product_merchant_id=516326659&ds_e_product_country=KR&ds_e_product_language=ko&ds_e_product_channel=online&ds_e_product_store_id=&ds_url_v=2&albcp=21445427499&albag=&isSmbAutoCall=false&needSmbHouyi=false&gad_source=1&gclid=EAIaIQobChMIh4m69pnWigMVRtEWBR2etj3sEAQYASABEgItRvD_BwE
-```
 
   - <GPS 모듈>
     - 구매 사이트 : https://www.devicemart.co.kr/goods/view?no=1342149
@@ -234,11 +236,9 @@ dmesg                   # 부팅 및 커널 메시지 확인
 
   
 - 적용 방법 참고 사이트
-
-
-
-
-
+    - 라즈베리파이 쿨링 팬 조립 영상 참고
+      <br> 
+      https://youtu.be/qEsSK9WIRM4?si=EBuVo_umLaNIKF99
 
 
 
