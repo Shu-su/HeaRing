@@ -13,20 +13,20 @@
 
 
 
-### 2. 개발 전 원격제어 환경 구성 
+### 개발 전 원격제어 환경 구성 
 - SD 카드 환경설정
 - VNC 설정 
 - Linux 환경설정
 - 자주 사용하는 Linux 명령어 
   
 
-### 3. 사용한 센서 및 부가적인 부품과 적용 방법 
+### 사용한 센서 및 부가적인 부품과 적용 방법 
 - 필요한 부품
 - 부품 조립 참조 사이트
 - 부품 조립 후 완성 사진 
 
 
-### 4. 하드웨어 로직 & 코드 구성 및 이슈해결 방법 
+### 하드웨어 로직 & 코드 구성 및 이슈해결 방법 
 -  전체적인 하드웨어 로직 
 -  병렬 처리 로직 구현 방법
 -  비동기식 양방향 통신 기능 구현 방법
@@ -231,11 +231,11 @@ dmesg                   # 부팅 및 커널 메시지 확인
     - 구매 사이트 :  https://www.devicemart.co.kr/goods/view?no=10889448
 
   - <쿨링 케이스>
-    //튼튼하고 좋았던 케이스 쿨링팬이 두개나 들어가있어서 열회전률이 좋다. 최종 사진에는 첨부되어있지않음. <br>
+    //튼튼하고 좋았던 케이스 쿨링팬이 두개나 들어가있어서 열회전률이 좋다. 최종 사진에는 사용하지않았음. <br>
     
     - 구매사이트 : https://www.icbanq.com/P008890303?utm_source=google&utm_medium=cpc&utm_campaign=%EC%87%BC%ED%95%91_%EC%A2%85%ED%95%A9&utm_id=%EC%87%BC%ED%95%91_%EC%A2%85%ED%95%A9&utm_term=notset&utm_content=%EC%87%BC%ED%95%91_%EC%A2%85%ED%95%A9&gad_source=1&gclid=CjwKCAiAm-67BhBlEiwAEVftNv5RHoXcFabAq3g__s4Hs3WGbJ2BSN4SGltQBqX32d5kHumnV80bwBoCJTUQAvD_BwE
 
-- 부품 조립 후 사진 
+- 부품 조립 후 최종 사진 
 
 <img src="https://github.com/user-attachments/assets/70962858-9c5e-4720-96e8-9acc6fc646f0"  width="400" height="300"/>
 <img src="https://github.com/user-attachments/assets/154d7e51-22e2-44b6-95ca-ac5e447e2ff5"  width="400" height="300"/>
