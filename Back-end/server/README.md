@@ -5,9 +5,10 @@
 Spring Boot를 기반으로 RESTful API를 제공하며, AWS EC2에서 구현되는 것을 전제로 합니다. 
 
 ## 주요 기능
-- 사용자 및 단말기 관리
-- 녹음 데이터 처리 및 저장
-- 위험 감지 및 알림 전송
+- 사용자 및 단말기 관리: 보호자가 관리할 단말기를 등록하고 정보를 수정할 수 있습니다.
+- 녹음 데이터 처리 및 저장: 단말기로부터 전송받은 녹음 데이터를 서버에 저장하고 처리합니다.
+- 위험 감지 및 알림 전송: 위험으로 판단된 데이터를 보호자가 확인할 수 있도록 알림을 발송합니다.
+- 위험상황 데이터 조회 및 저장: 보호자의 판단 하에 데이터를 처리할 수 있도록 조회 및 기록으로 저장 기능을 제공합니다.
 
 ## 주요 기술 스택
 - **프레임워크**: Spring Boot
@@ -16,8 +17,6 @@ Spring Boot를 기반으로 RESTful API를 제공하며, AWS EC2에서 구현되
 - **기타**: AWS S3, Firebase FCM
   
 ---
-
-
 
 
 
@@ -52,7 +51,7 @@ sudo systemctl enable mosquitto
 
 ## 2. Spring Boot 애플리케이션 설정
 ### 2.1 프로젝트 배포
-* 해당 디렉토리의 .zip을 서버에 업로드 후 압축 해제하여 사용합니다. 
+* 해당 디렉토리의 .zip(pom.xml 포함) 을 서버에 업로드 후 압축 해제하여 사용합니다. 
 
 
 ### 2.2 application.properties 설정
@@ -104,6 +103,6 @@ mysql -h <RDS_ENDPOINT> -u <DB_USERNAME> -p
 ---
 
 ## API 문서 확인
-Swagger를 사용해 API 명세서를 제공합니다.
+해당 프로젝트에서 사용되는 REST API 명세서는 Swagger를 통해 제공됩니다.
 
-로컬 서버 실행 후 http://localhost:8080/swagger-ui.html에서 확인할 수 있습니다.
+로컬 서버 실행 후 http://localhost:8080/swagger-ui.html에서 확인하실 수 있습니다.
