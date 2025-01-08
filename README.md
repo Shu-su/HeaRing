@@ -48,7 +48,7 @@
 - Bert 모델을 파인튜닝하여 위험 상황과 정상 상황의 발화를 분류
 - 한국어로 훈련된 SKT의 ‘KoBert’ 모델 선택해 파인튜닝 진행
 - 정상상황 발화 13,776개 + 위험상황 발화 6,016개 ⇒ 총 19,792개 데이터 사용
-- loss 0.10, accuracy 0.98의 성능을 보임
+- 훈련 결과 : loss 0.10, accuracy 0.98
 <p align='center'><img width='70%' src='https://github.com/user-attachments/assets/beba0029-9b57-4cd2-9c81-2bda0d018473'></p>
 <br>
 
