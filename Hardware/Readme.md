@@ -300,8 +300,9 @@ dmesg                   # 부팅 및 커널 메시지 확인
 
 ## 4. 하드웨어 로직 구성 및 이슈해결
 
-- 전체적인 하드웨어 로직 
- <img src="https://github.com/user-attachments/assets/09d35f88-b28a-4177-b155-022fbe457235"  width="600" height="600"/>
+- 전체적인 하드웨어 로직
+
+ <img src="https://github.com/user-attachments/assets/6f619039-51af-437f-8851-9ff8ada647f5"  width="700" height="600"/>
 
 
 
