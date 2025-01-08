@@ -35,8 +35,17 @@
 <br>
 
 ## 화면 구성 🖥️
-<!-- 표로 구성 -->
+|회원가입|회원가입 및 로그인|
+|------|---|
+|<p align='center'><img width="80%" src="https://github.com/user-attachments/assets/4ac7421c-d9e0-43c5-916d-63281f8e274b"></p>|<p align='center'><img width="80%" src="https://github.com/user-attachments/assets/ba927368-6591-40fe-805c-0e5a97cab00b"></p>|
+|<p align='center'>**메인화면**</p>|<p align='center'>**위험감지화면**</p>|
+|<p align='center'><img width="80%" src="https://github.com/user-attachments/assets/c1e57e1d-5ef2-441a-877f-d25dab928e3f"></p>|<p align='center'><img width="80%" src="https://github.com/user-attachments/assets/14c43bcd-f8b4-42b6-9446-a4e021d2c0ef"></p>|
+|<p align='center'>**GPS화면**</p>|<p align='center'>**이전기록 다시보기 화면**</p>|
+|<p align='center'><img width="80%" src="https://github.com/user-attachments/assets/8fbc68b4-e7c3-48a3-b7ae-7a4711dd1dbb"></p>|<p align='center'><img width="80%" src="https://github.com/user-attachments/assets/c61de56e-91cb-4879-a705-ce6e84bc6e04"></p>|
+
+
 <br>
+<p align='center'><img width="80%" src="> </p>
 
 ## 프로젝트 구조 🧱
 ### 시나리오
