@@ -31,4 +31,4 @@
 <br><br>
 
 ## 주요 기능
-<img width='50%' src='https://github.com/user-attachments/assets/9e4d0af0-75a9-4432-affd-263ee6379cf2'>
+<img width='70%' src='https://github.com/user-attachments/assets/9e4d0af0-75a9-4432-affd-263ee6379cf2'>
