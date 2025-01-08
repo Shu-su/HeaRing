@@ -5,7 +5,7 @@
 ![Dart](https://img.shields.io/badge/Dart-0175C2?style=for-the-badge&logo=dart&logoColor=white)
    
 ### 1. App 구성도
-
+![app구성도](https://github.com/user-attachments/assets/1f5c792f-bcb7-4a5a-b516-ebcca10c25eb)
 
 ### 2. 필수 라이브러리
 
