@@ -415,20 +415,16 @@ sudo raspi-config
 
 
 Interfacing options -> Serial -> No -> Yes 이후 재부팅
-<img src="https://github.com/user-attachments/assets/de7679f1-c293-4863-85be-486e60b2d704
-"  width="400" height="300"/>
+<img src="https://github.com/user-attachments/assets/29a161e2-0615-4e1d-a047-4327ec8a6341"  width="400" height="300"/>
 
 
-<img src="https://github.com/user-attachments/assets/360bb8e3-2d7c-45a2-b191-4d59ba6ca1d2
-"  width="400" height="300"/>
+<img src="https://github.com/user-attachments/assets/c6c3c5c1-22d1-4c82-826e-eb5df6a6d5d5"  width="400" height="300"/>
 
 
-<img src="https://github.com/user-attachments/assets/83accd1a-4e87-4b3a-91d2-060195b3ccde
-"  width="400" height="300"/>
+<img src="https://github.com/user-attachments/assets/ef2aff21-74ce-4929-b2a4-4d1586140f09"  width="400" height="300"/>
 
 
-<img src="https://github.com/user-attachments/assets/0e5c9d00-15bb-4c13-9cbb-ea01b11fefa4
-"  width="400" height="300"/>
+<img src="https://github.com/user-attachments/assets/47e69783-5629-4a1d-afe9-393c67396e71"  width="400" height="300"/>
 
 
 3. GPS 데이터 표시 툴 (gpsd) 설치
