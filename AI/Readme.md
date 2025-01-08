@@ -107,6 +107,7 @@ git clone https://huggingface.co/WarrWang/fordanger1
 > - model.py : 모델 핸들러 역할 (모델 초기화, 추론 메서드 존재) <br>
 > - predicct_sentence.py : 전처리, 모델 추론, 결과 생성
 
+<br>
 
 # 한계
 ## 1. 위험 발화 데이터 수집의 한계
