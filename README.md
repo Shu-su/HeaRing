@@ -66,6 +66,192 @@
 <br>
 
 ### 디렉터리 구조
+```
+```
+📦 
+├─ AI
+│  ├─ 1_텍스트 데이터 전처리.ipynb
+│  ├─ 2_데이터 증강 (KorEDA).ipynb
+│  ├─ 3_위험상황판단AI_KoBERT.ipynb
+│  ├─ Readme.md
+│  └─ aiServer
+│     ├─ app_flask.py
+│     ├─ model.py
+│     └─ predict_sentence.py
+├─ Back-end
+│  ├─ server
+│  │  ├─ README.md
+│  │  ├─ pom.xml
+│  │  └─ src
+│  │     ├─ main
+│  │     │  ├─ java
+│  │     │  │  ├─ Main.java
+│  │     │  │  └─ org
+│  │     │  │     └─ hdmd
+│  │     │  │        └─ hearingdemo
+│  │     │  │           ├─ DirtyChecking.java
+│  │     │  │           ├─ HearingDemoApplication.java
+│  │     │  │           ├─ config
+│  │     │  │           │  ├─ AWSConfig.java
+│  │     │  │           │  ├─ HearingConfig.java
+│  │     │  │           │  ├─ SwaggerConfig.java
+│  │     │  │           │  └─ WebSocketConfig.java
+│  │     │  │           ├─ controller
+│  │     │  │           │  ├─ DeviceManager.java
+│  │     │  │           │  ├─ GlobalExceptionHandler.java
+│  │     │  │           │  ├─ HistoryController.java
+│  │     │  │           │  ├─ LocationController.java
+│  │     │  │           │  ├─ NotificationController.java
+│  │     │  │           │  └─ RecordingController.java
+│  │     │  │           ├─ dto
+│  │     │  │           │  ├─ DeviceManageDTO.java
+│  │     │  │           │  ├─ DeviceMonitorDTO.java
+│  │     │  │           │  ├─ DeviceStatusUpdateDTO.java
+│  │     │  │           │  ├─ HistoryDTO.java
+│  │     │  │           │  ├─ LocationDataDTO.java
+│  │     │  │           │  ├─ RecordingDTO.java
+│  │     │  │           │  ├─ RecordingDownloadDTO.java
+│  │     │  │           │  ├─ RecordingInfoDTO.java
+│  │     │  │           │  ├─ RecordingSendDTO.java
+│  │     │  │           │  └─ UserDTO.java
+│  │     │  │           ├─ exception
+│  │     │  │           │  ├─ DeviceNotFoundException.java
+│  │     │  │           │  ├─ GlobalExceptionHandler.java
+│  │     │  │           │  ├─ HistoryNotFoundException.java
+│  │     │  │           │  └─ RecordingNotFoundException.java
+│  │     │  │           ├─ handler
+│  │     │  │           │  └─ WebsocketHandler.java
+│  │     │  │           ├─ model
+│  │     │  │           │  ├─ Notification.java
+│  │     │  │           │  ├─ User.java
+│  │     │  │           │  ├─ device
+│  │     │  │           │  │  └─ Device.java
+│  │     │  │           │  └─ recording
+│  │     │  │           │     ├─ History.java
+│  │     │  │           │     └─ Recording.java
+│  │     │  │           ├─ repository
+│  │     │  │           │  ├─ DeviceRepository.java
+│  │     │  │           │  ├─ HistoryRepository.java
+│  │     │  │           │  ├─ LocationRepository.java
+│  │     │  │           │  ├─ NotificationRepository.java
+│  │     │  │           │  ├─ RecordingRepository.java
+│  │     │  │           │  └─ UserRepository.java
+│  │     │  │           ├─ security
+│  │     │  │           │  └─ JwtAuthenticationFilter.java
+│  │     │  │           ├─ service
+│  │     │  │           │  ├─ AIService.java
+│  │     │  │           │  ├─ ClovaSpeechClient.java
+│  │     │  │           │  ├─ DeviceService.java
+│  │     │  │           │  ├─ HistoryService.java
+│  │     │  │           │  ├─ NotificationManager.java
+│  │     │  │           │  ├─ NotificationService.java
+│  │     │  │           │  ├─ NotificationStatus.java
+│  │     │  │           │  └─ RecordingService.java
+│  │     │  │           └─ util
+│  │     │  │              └─ JwtUtil.java
+│  │     │  └─ resources
+│  │     │     └─ application.properties
+│  │     └─ test
+│  │        └─ java
+│  │           └─ org
+│  │              └─ hdmd
+│  │                 └─ hearingdemo
+│  │                    ├─ HearingDemoApplicationTests (2).java
+│  │                    └─ HearingDemoApplicationTests.java
+│  └─ serverless
+│     ├─ GPSwebsocket.zip
+│     ├─ README.md
+│     └─ extract-data.zip
+├─ Front-end
+│  ├─ Readme.md
+│  ├─ android
+│  │  ├─ app
+│  │  │  ├─ build.gradle
+│  │  │  ├─ google-services.json
+│  │  │  └─ src
+│  │  │     ├─ debug
+│  │  │     │  └─ AndroidManifest.xml
+│  │  │     ├─ main
+│  │  │     │  ├─ AndroidManifest.xml
+│  │  │     │  ├─ java
+│  │  │     │  │  └─ io
+│  │  │     │  │     └─ flutter
+│  │  │     │  │        └─ plugins
+│  │  │     │  │           └─ GeneratedPluginRegistrant.java
+│  │  │     │  ├─ kotlin
+│  │  │     │  │  └─ com
+│  │  │     │  │     └─ example
+│  │  │     │  │        └─ test_hearing
+│  │  │     │  │           └─ MainActivity.kt
+│  │  │     │  └─ res
+│  │  │     │     ├─ drawable-v21
+│  │  │     │     │  └─ launch_background.xml
+│  │  │     │     ├─ drawable
+│  │  │     │     │  └─ launch_background.xml
+│  │  │     │     ├─ mipmap-hdpi
+│  │  │     │     │  └─ ic_launcher.png
+│  │  │     │     ├─ mipmap-mdpi
+│  │  │     │     │  └─ ic_launcher.png
+│  │  │     │     ├─ mipmap-xhdpi
+│  │  │     │     │  └─ ic_launcher.png
+│  │  │     │     ├─ mipmap-xxhdpi
+│  │  │     │     │  └─ ic_launcher.png
+│  │  │     │     ├─ mipmap-xxxhdpi
+│  │  │     │     │  └─ ic_launcher.png
+│  │  │     │     ├─ values-night
+│  │  │     │     │  └─ styles.xml
+│  │  │     │     └─ values
+│  │  │     │        └─ styles.xml
+│  │  │     └─ profile
+│  │  │        └─ AndroidManifest.xml
+│  │  ├─ build.gradle
+│  │  ├─ gradle.properties
+│  │  ├─ gradle
+│  │  │  └─ wrapper
+│  │  │     ├─ gradle-wrapper.jar
+│  │  │     └─ gradle-wrapper.properties
+│  │  ├─ gradlew
+│  │  ├─ gradlew.bat
+│  │  ├─ local.properties
+│  │  ├─ settings.gradle
+│  │  └─ test_hearing_android.iml
+│  ├─ assets
+│  │  ├─ background.jpg
+│  │  └─ logo.png
+│  ├─ lib
+│  │  ├─ danger.dart
+│  │  ├─ firebase_options.dart
+│  │  ├─ gps.dart
+│  │  ├─ history.dart
+│  │  ├─ http
+│  │  │  ├─ get_dangerdata.dart
+│  │  │  ├─ get_historydata.dart
+│  │  │  ├─ put_readnoti.dart
+│  │  │  ├─ reverse_geocoding.dart
+│  │  │  ├─ save_dangerdata.dart
+│  │  │  └─ update_dangerdata.dart
+│  │  ├─ main.dart
+│  │  ├─ recode.dart
+│  │  ├─ service
+│  │  │  ├─ fcm_service.dart
+│  │  │  ├─ notification_provider.dart
+│  │  │  └─ recode_provider.dart
+│  │  ├─ test_main.dart
+│  │  └─ widget
+│  │     ├─ danger_fin_widget.dart
+│  │     ├─ danger_gpswidget.dart
+│  │     ├─ danger_playpopup.dart
+│  │     ├─ danger_widget.dart
+│  │     ├─ main_notificationlist.dart
+│  │     └─ main_widget.dart
+│  └─ pubspec.yaml
+├─ Hardware
+│  ├─ Readme.md
+│  └─ raspberrypi.py
+└─ README.md
+```
+©generated by [Project Tree Generator](https://woochanleee.github.io/project-tree-generator)
+```
 
 <br>
 
