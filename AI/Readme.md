@@ -32,6 +32,12 @@ AI 개발은 다음 단계로 진행되었습니다. 잘 정리된 PPT 이미지
 ---
 
 # 서버 탑재
+<img width='' src='https://github.com/user-attachments/assets/3ea10949-0e9f-4657-9ccf-e74bb547408f'><br>
+
+
 
 
 # 한계
+1. 위험 발화 데이터 수집의 한계
+
+2. 실제 하드웨어와 함께 연동했을 때의 
