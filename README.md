@@ -1,11 +1,8 @@
 # 헤아Ring
 <p align='center'>
-  <img width='300' src='https://github.com/user-attachments/assets/a52ab25a-7ea0-475a-9e44-27f1d7586c6d'>
-  <img width='300' src='https://github.com/user-attachments/assets/5582a2e6-4ef8-44b7-93f7-4fe249de1714'><br><br>
-  <b>치매 환자 발화패턴 학습 AI를 이용한 위험 상황 감지 및 실종 예방 도우미</b><br><br>
-  팀원 소개⦁목적⦁주요 기능⦁인공지능⦁화면구성⦁시스템 구조⦁기술스택
-  <br>
-</p><br>
+<img width='300' src='https://github.com/user-attachments/assets/a52ab25a-7ea0-475a-9e44-27f1d7586c6d'>
+<img width='300' src='https://github.com/user-attachments/assets/5582a2e6-4ef8-44b7-93f7-4fe249de1714'><br><br>
+<b>치매 환자 발화패턴 학습 AI를 이용한 위험 상황 감지 및 실종 예방 도우미</b><br><br></p><br>
 
 > 한양여자대학교 스마트IT과 캡스톤디자인 졸업작품 수제지능팀입니다.<br>
 > 개발기간 : 2024.04 ~ 2024.11
@@ -36,7 +33,7 @@
 
 ## 주요 기능 📦
 <img width='70%' src='https://github.com/user-attachments/assets/9e4d0af0-75a9-4432-affd-263ee6379cf2'>
-<br>
+<br><br>
 
 ## 화면 구성 🖥️
 |회원가입|회원가입 및 로그인|
@@ -50,10 +47,11 @@
 
 ## 위험상황 판단 AI 📊
 - Bert 모델을 파인튜닝하여 위험 상황과 정상 상황의 발화를 분류
-- 한국어로훈련된 SKT의 ‘KoBert’ 모델 선택해 파인튜닝 진행
+- 한국어로 훈련된 SKT의 ‘KoBert’ 모델 선택해 파인튜닝 진행
 - 정상상황 발화 13,776개 + 위험상황 발화 6,016개 ⇒ 총 19,792개 데이터 사용
-
-
+- loss 0.10, accuracy 0.98의 성능을 보임
+<p align='center'><img width='70%' src='https://github.com/user-attachments/assets/beba0029-9b57-4cd2-9c81-2bda0d018473'></p>
+<br>
 
 ## 프로젝트 구조 🧱
 ### 시나리오
