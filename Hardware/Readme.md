@@ -394,6 +394,86 @@ dmesg                   # 부팅 및 커널 메시지 확인
 <br> 
 <img src="https://github.com/user-attachments/assets/997dc08c-eb9d-4e17-87ce-de90fb1726b5"  width="400" height="300"/>
 
+-------------------
+
+1. 라즈베리파이 업데이트 및 재부팅
+
+```
+sudo apt-get update
+sudo apt-get upgrade
+sudo reboot
+```
+
+----------------------
+
+
+2. GPS 사용을 위한 설정
+
+```
+sudo raspi-config
+```
+
+
+Interfacing options -> Serial -> No -> Yes 이후 재부팅
+<img src="https://github.com/user-attachments/assets/de7679f1-c293-4863-85be-486e60b2d704
+"  width="400" height="300"/>
+
+
+<img src="https://github.com/user-attachments/assets/360bb8e3-2d7c-45a2-b191-4d59ba6ca1d2
+"  width="400" height="300"/>
+
+
+<img src="https://github.com/user-attachments/assets/83accd1a-4e87-4b3a-91d2-060195b3ccde
+"  width="400" height="300"/>
+
+
+<img src="https://github.com/user-attachments/assets/0e5c9d00-15bb-4c13-9cbb-ea01b11fefa4
+"  width="400" height="300"/>
+
+
+3. GPS 데이터 표시 툴 (gpsd) 설치
+----------------------------
+
+```
+sudo apt-get install gpsd-clients gpsd -y
+```
+<br> 
+
+4. 초기 설정 변경
+
+```
+sudo nano /etc/default/gpsd
+```
+DEVICES=""를 사용할 포트로 수정 <br> 
+ex) DEVICES="/dev/ttyUSB0" <br>
+이후 재부팅 
+
+-----------------
+
+- GPS 데이터 보기
+
+```
+gpsmon 또는 cgps -s
+```
+
+<img src="https://github.com/user-attachments/assets/e811a290-0738-4fbb-898e-074122182879
+"  width="400" height="300"/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ## Numpy를 활용한 정확한 음성 추출 방법 
 ### 개발 중 생긴 문제 
