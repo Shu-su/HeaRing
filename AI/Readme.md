@@ -71,10 +71,10 @@ AI 개발은 다음 단계로 진행되었습니다. 잘 정리된 PPT 이미지
 <br>
 
 ## 2️⃣ AWS EC2 딥러닝 서버 생성
+> 아래 사양으로 인스턴스 생성과 기본 라이브러리 설치 진행하였습니다. 
 > - 인스턴스 유형 : g4dn.xlarge (GPU 사용)
 > - Ubuntu 기반 인스턴스 사용
 > - AMI : Deep Learning OSS Nvidia Driver AMI GPU PyTorch 2.4.1 (Ubuntu 22.04) <br>
-> 위 사양으로 인스턴스 생성과 기본 라이브러리 설치 진행하였습니다. 
 <br>
 
 ```
