@@ -78,7 +78,6 @@ AI 개발은 다음 단계로 진행되었습니다. 잘 정리된 PPT 이미지
 <br>
 
 ```
-pip install 'git+https://github.com/SKTBrain/KoBERT.git#egg=kobert_tokenizer&subdirectory=kobert_hf'
 pip install mxnet
 pip install gluonnlp
 pip install sentencepiece
