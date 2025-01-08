@@ -38,8 +38,6 @@
 - `shared_preferences`: 로컬 저장소에 간단한 데이터를 저장하고 불러오기 위한 라이브러리
 
 ##### 기타
-- `cupertino_icons`: iOS 스타일의 아이콘을 제공하는 라이브러리
-- `googleapis`: Google API 사용을 위한 라이브러리
 - `intl`: 날짜와 숫자의 국제화 처리를 위한 라이브러리
 
 ### 3. 주요 기능
