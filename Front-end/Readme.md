@@ -58,9 +58,9 @@ provider 및 shared_preferences 라이브러리를 활용되며, 사용자가 �
 
 알림 목록
 
-|               |               |
-|---------------|---------------|
+
 | <img src="https://github.com/user-attachments/assets/a3d34466-7c52-411e-a99d-dbb744537ebe" alt="메인화면" width="250" height="550"/> | <img src="https://github.com/user-attachments/assets/d251da22-61ed-427b-80ce-631f424df9e2" alt="알림목록" width="250" height="550"/> |
+|---------------|---------------|
 | <p align="center">메인 화면</p> | <p align="center">알림 목록</p> |
 
 #### 3.2 위험감지 화면 및 녹음 화면
@@ -75,13 +75,31 @@ _위험 발생 시간 확인, 발화위치(지도 및 텍스트), 발화 문장,
 위험 상황을 종료할 때 사용자가 실제 위험 상황이었는지 확인하여 해당 정보를 저장할 수 있습니다.<br>
 저장된 정보는 이전기록 다시보기에서 확인할 수 있습니다. 
 
-| <img src="https://github.com/user-attachments/assets/884a733a-3e79-41f4-8f3d-595458cfd5a5" alt="위험감지" width="250" height="550"/>    | 셀 1,2 내용    |  <img src="https://github.com/user-attachments/assets/335abb78-c93c-45f1-a8cd-83d5123bcdb1" alt="팝업1" width="250" height="550"/>   | <img src="https://github.com/user-attachments/assets/451a3361-cb2c-4259-ad43-1d2ff8bb96b0" alt="팝업2" width="250" height="550"/>    |
+| <img src="https://github.com/user-attachments/assets/884a733a-3e79-41f4-8f3d-595458cfd5a5" alt="위험감지" width="250" height="550"/>    | <img src="https://github.com/user-attachments/assets/04726e0c-1282-41d3-a2e6-12b76dd7b09f" alt="레코드화면" width="250" height="550"/>    |  <img src="https://github.com/user-attachments/assets/335abb78-c93c-45f1-a8cd-83d5123bcdb1" alt="팝업1" width="250" height="550"/>   | <img src="https://github.com/user-attachments/assets/451a3361-cb2c-4259-ad43-1d2ff8bb96b0" alt="팝업2" width="250" height="550"/>    |
 |----------------|----------------|----------------|----------------|
 | <p align="center">위험 감지 화면</p> | <p align="center">녹음 화면</p> | <p align="center">상황 종료 팝업_1</p> | <p align="center">상황 종료 팝업_2</p> |
 
+#### 3.3 이전 기록 다시 보기 화면
 
 
+**이전 기록 다시 보기** <br>
+메인화면에서 접근 가능하며, 사용자가 위험 상황 감지 화면에서 저장했던 데이터들을 확인할 수 있습니다. <br> 
 
-<img src="https://github.com/user-attachments/assets/d251da22-61ed-427b-80ce-631f424df9e2" alt="알림목록" width="200" height="550"/>
+| <img src="https://github.com/user-attachments/assets/565c2b80-b0f6-47b0-b954-183bf24ed3a9" alt="이전기록" width="450" height="550"/> |
+|---------------|
+| <p align="center">이전 기록 다시 보기 화면 </p> |
+
+
+#### 3.4 GPS 화면
+
+
+**GPS** <br>
+메인화면 및 위험 감지 화면에서 접근 가능하며, 치매 환자(단말기 착용자)의 현재 위치를 확인할 수 있습니다. <br> 
+
+| <img src="https://github.com/user-attachments/assets/1ac451de-4f8f-4180-88c8-02c9be5f5d7e" alt="GPS" width="250" height="550"/> |
+|---------------|
+| <p align="center">GPS 화면</p> |
+
+
 
 
