@@ -3,6 +3,9 @@
 
 <img src="https://github.com/user-attachments/assets/fe76ecc5-ce4a-4b61-8515-3b4dd8951b2f"  width="300" height="300"/>
 
+<img src="https://github.com/user-attachments/assets/0009cea5-94c5-41cd-b9d5-d48be550fa03"  width="300" height="300"/>
+
+
 ## 목차
 1.[개요](#1-개요) <br>
 2.[개발 전 원격제어 환경 구성 방법](#2-개발-전-원격제어-환경-구성-방법)<br>
