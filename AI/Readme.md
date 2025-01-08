@@ -61,8 +61,7 @@ AI 개발은 다음 단계로 진행되었습니다. 잘 정리된 PPT 이미지
 
 ---
 
-# 서버 탑재
-<img width='' src='https://github.com/user-attachments/assets/3ea10949-0e9f-4657-9ccf-e74bb547408f'><br>
+# 서버에서 모델 이용
 
 ## 1️⃣ 허깅페이스 허브에 모델 탑재
 > 첨부된 코드 **'3_위험상황판단AI_KoBERT.ipynb'로 진행** <br>
@@ -71,9 +70,40 @@ AI 개발은 다음 단계로 진행되었습니다. 잘 정리된 PPT 이미지
 <br>
 
 ## 2️⃣ AWS EC2 딥러닝 서버 생성
-> 
+> - 인스턴스 유형 : g4dn.xlarge (GPU 사용)
+> - Ubuntu 기반 인스턴스 사용
+> - AMI : Deep Learning OSS Nvidia Driver AMI GPU PyTorch 2.4.1 (Ubuntu 22.04) <br>
+> 위 사양으로 인스턴스 생성과 기본 라이브러리 설치 진행하였습니다. 
+<br>
+
+```
+pip install 'git+https://github.com/SKTBrain/KoBERT.git#egg=kobert_tokenizer&subdirectory=kobert_hf'
+pip install mxnet
+pip install gluonnlp
+pip install sentencepiece
+pip install transformers
+pip install torch
+pip install pandas
+pip install boto3
+
+pip install numpy==1.23.1
+pip install gluonnlp==0.8.0
+pip install 'git+https://github.com/SKTBrain/KoBERT.git#egg=kobert_tokenizer&subdirectory=kobert_hf'
+git clone https://huggingface.co/WarrWang/fordanger1
+```
+
+<br>
+
+> 마지막 줄에서 서버 인스턴스 내로 Clone 되지만 직접 다운 받고 싶을 땐 아래 링크를 이용하면 됩니다. <br>
+> - [허깅페이스허브에서 모델 다운로드](https://huggingface.co/WarrWang/fordanger1/tree/main)
+
+<br>
 
 ## 3️⃣ 딥러닝 서버에 모델 배포
+<p align='center'><img width='60%' src='https://github.com/user-attachments/assets/3ea10949-0e9f-4657-9ccf-e74bb547408f'></p><br>
+
+> 'aiServer' 디렉터리 내의 소스코드를 통해 발화 문장을 예측합니다. <br>
+> 
 
 
 # 한계
