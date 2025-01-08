@@ -48,6 +48,13 @@
 |<p align='center'><img width="70%" src="https://github.com/user-attachments/assets/8fbc68b4-e7c3-48a3-b7ae-7a4711dd1dbb"></p>|<p align='center'><img width="60%" src="https://github.com/user-attachments/assets/c61de56e-91cb-4879-a705-ce6e84bc6e04"></p>|
 <br>
 
+## 위험상황 판단 AI 📊
+- Bert 모델을 파인튜닝하여 위험 상황과 정상 상황의 발화를 분류
+- 한국어로훈련된 SKT의 ‘KoBert’ 모델 선택해 파인튜닝 진행
+- 정상상황 발화 13,776개 + 위험상황 발화 6,016개 ⇒ 총 19,792개 데이터 사용
+
+
+
 ## 프로젝트 구조 🧱
 ### 시나리오
 <img width='70%' src='https://github.com/user-attachments/assets/cbdf45b5-1088-4560-bc03-f900b2cd524a'>
@@ -79,12 +86,13 @@
 
 ### 프론트엔드
 ![](https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white)
-
 <br>
 
 ### AI
 ![](https://img.shields.io/badge/Colab-F9AB00?style=for-the-badge&logo=googlecolab&color=525252)
+![](https://img.shields.io/badge/PyCharm-000000.svg?&style=for-the-badge&logo=PyCharm&logoColor=white)
 ![](https://img.shields.io/badge/Python-14354C?style=for-the-badge&logo=python&logoColor=white)
+<img src="https://img.shields.io/badge/PyTorch-EE4C2C?style=for-the-badge&logo=PyTorch&logoColor=white">
 ![](https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=flask&logoColor=white)
 <img src="https://img.shields.io/badge/HuggingFace-FFD21E?style=for-the-badge&logo=HuggingFace&logoColor=black">
 ![](https://img.shields.io/badge/Amazon_AWS-232F3E?style=for-the-badge&logo=amazon-aws&logoColor=white)
@@ -92,3 +100,4 @@
 
 ### 하드웨어
 
+<br>
