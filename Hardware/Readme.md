@@ -105,7 +105,7 @@
 
 
 <br> 
--  VNC 설정<br>
+- putty 접속 후 보드 업데이트 
 
 ```
 >> 업데이트 코드 sudo apt-get update
@@ -116,6 +116,54 @@
 ```
 >> 종료 시 작성 코드 sudo shutdown –h now or sudo shutdown now
 ```
+
+
+-  VNC 설정<br>
+
+1) putty 환경에서 아래 명령어 입력 
+```
+sudo raspi-config
+```
+2) SSH 활성화 되어 있는지 확인
+```
+Interface Options 클릭 
+```
+<img src="https://github.com/user-attachments/assets/17f5c76b-c85b-4595-a303-3768386ba1e4"  width="550" height="300"/>
+<br> 
+
+<br> 
+
+
+
+``` SSH ```  클릭 <br> 
+<img src="https://github.com/user-attachments/assets/f6659cf1-95da-430c-9f7b-276095321b7d"  width="550" height="300"/>
+
+
+
+
+
+
+<br> 
+
+```yes``` 클릭 
+
+<img src="https://github.com/user-attachments/assets/195918aa-eff9-4796-9924-78944d2e24ca"  width="550" height="300"/>
+
+
+3) VNC 활성화
+``` Interface Options  ``` 클릭
+
+<img src="https://github.com/user-attachments/assets/7e207ffc-9a0b-47b1-bced-2117698895ed"  width="550" height="300"/>
+
+
+``` VNC ``` 클릭 
+
+<img src="https://github.com/user-attachments/assets/45c02440-8ea1-4615-95d1-0429e9b44dc0"  width="550" height="300"/>
+<br> 
+<br> 
+<br>
+
+
 
 
 - 한국어설정 
