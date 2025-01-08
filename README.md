@@ -42,10 +42,7 @@
 |<p align='center'><img width="70%" src="https://github.com/user-attachments/assets/676c8941-2935-473d-afda-888058e48b13"></p>|<p align='center'><img width="110%" src="https://github.com/user-attachments/assets/14c43bcd-f8b4-42b6-9446-a4e021d2c0ef"></p>|
 |<p align='center'>**GPS화면**</p>|<p align='center'>**이전기록 다시보기 화면**</p>|
 |<p align='center'><img width="70%" src="https://github.com/user-attachments/assets/8fbc68b4-e7c3-48a3-b7ae-7a4711dd1dbb"></p>|<p align='center'><img width="60%" src="https://github.com/user-attachments/assets/c61de56e-91cb-4879-a705-ce6e84bc6e04"></p>|
-
-
 <br>
-<p align='center'><img width="80%" src="> </p>
 
 ## 프로젝트 구조 🧱
 ### 시나리오
