@@ -92,6 +92,8 @@
   - 기존 Raspberrypi imager 을 설치 후 작성 했던 네트워크 아이디와 같은 네트워크를 연결 한다.
   - 연결 된 네트워크의 IP주소를 확인 한다
     - ex) 노트북의 핫스팟으로 연결 한다면, 노트북의 설정에서 "네트워크 및 인터넷" 메뉴에서 연결된 보드의 네트워크 IP를 확인 할 수 있다
+   
+      
       <img src="https://github.com/user-attachments/assets/c59c4f58-d87d-4a0c-97bb-43c789ef9b4c"  width="300" height="70"/>
       
 
@@ -215,30 +217,29 @@ dmesg                   # 부팅 및 커널 메시지 확인
 
   - <라즈베리파이4>  라즈베리파이4보드 8GB 및 충전기, 쿨링 팬 케이스, SD 카드 32GB , SD 카드 리더기
 
-
-    - 구매 사이트 : https://www.coupang.com/vp/products/7429911069?itemId=19294690189&vendorItemId=86409354176
+    - 구매 사이트 :<a href="https://www.coupang.com/vp/products/7429911069?itemId=19294690189&vendorItemId=86409354176"> 라즈베리파이4 베이직 키트 8GB </a> 
 
   - <소형 마이크>
-    - 구매 사이트 : <a href="https://ko.aliexpress.com/item/1005006411600203.html?src=google&pdp_npi=4%40dis%21KRW%211880%211471%21%21%21%21%21%40%2112000037070277039%21ppc%21%21%21&src=google&albch=shopping&acnt=298-731-3000&isdl=y&slnk=&plac=&mtctp=&albbt=Google_7_shopping&aff_platform=google&aff_short_key=UneMJZVf&gclsrc=aw.ds&&albagn=888888&&ds_e_adid=&ds_e_matchtype=&ds_e_device=c&ds_e_network=x&ds_e_product_group_id=&ds_e_product_id=ko1005006411600203&ds_e_product_merchant_id=516326659&ds_e_product_country=KR&ds_e_product_language=ko&ds_e_product_channel=online&ds_e_product_store_id=&ds_url_v=2&albcp=21445427499&albag=&isSmbAutoCall=false&needSmbHouyi=false&gad_source=1&gclid=EAIaIQobChMIh4m69pnWigMVRtEWBR2etj3sEAQYASABEgItRvD_BwE">슈퍼 미니 USB 2.0 마이크, 휴대용 스튜디오 음성 마이크, 오디오 어댑터 드라이버, 노트북, PC, MSN, 스카이프용, 신제품</a> 
+    - 구매 사이트 : <a href="https://ko.aliexpress.com/item/1005006411600203.html?src=google&pdp_npi=4%40dis%21KRW%211880%211471%21%21%21%21%21%40%2112000037070277039%21ppc%21%21%21&src=google&albch=shopping&acnt=298-731-3000&isdl=y&slnk=&plac=&mtctp=&albbt=Google_7_shopping&aff_platform=google&aff_short_key=UneMJZVf&gclsrc=aw.ds&&albagn=888888&&ds_e_adid=&ds_e_matchtype=&ds_e_device=c&ds_e_network=x&ds_e_product_group_id=&ds_e_product_id=ko1005006411600203&ds_e_product_merchant_id=516326659&ds_e_product_country=KR&ds_e_product_language=ko&ds_e_product_channel=online&ds_e_product_store_id=&ds_url_v=2&albcp=21445427499&albag=&isSmbAutoCall=false&needSmbHouyi=false&gad_source=1&gclid=EAIaIQobChMIh4m69pnWigMVRtEWBR2etj3sEAQYASABEgItRvD_BwE">슈퍼 미니 USB 2.0 마이크</a> 
        
 
 
-
   - <GPS 모듈>
-    - 구매 사이트 : https://www.devicemart.co.kr/goods/view?no=1342149
+    - 구매 사이트 : <a href="https://www.devicemart.co.kr/goods/view?no=1342149"> NT114990732 </a> 
 
 
   - <충전 모듈>
-    - 구매 사이트 : https://www.devicemart.co.kr/goods/view?no=12497514
+    - 구매 사이트 : <a href="https://www.devicemart.co.kr/goods/view?no=12497514"> SZH-RPI01 </a> 
 
 
   - <배터리>
-    - 구매 사이트 :  https://www.devicemart.co.kr/goods/view?no=10889448
+    - 구매 사이트 :  <a href="https://www.devicemart.co.kr/goods/view?no=10889448"> 18650 보호회로 리튬이온 충전지(배터리)/2000mA </a>
 
   - <쿨링 케이스>
     //튼튼하고 좋았던 케이스 쿨링팬이 두개나 들어가있어서 열회전률이 좋다. 최종 사진에는 사용하지않았음. <br>
     
-    - 구매사이트 : https://www.icbanq.com/P008890303?utm_source=google&utm_medium=cpc&utm_campaign=%EC%87%BC%ED%95%91_%EC%A2%85%ED%95%A9&utm_id=%EC%87%BC%ED%95%91_%EC%A2%85%ED%95%A9&utm_term=notset&utm_content=%EC%87%BC%ED%95%91_%EC%A2%85%ED%95%A9&gad_source=1&gclid=CjwKCAiAm-67BhBlEiwAEVftNv5RHoXcFabAq3g__s4Hs3WGbJ2BSN4SGltQBqX32d5kHumnV80bwBoCJTUQAvD_BwE
+    - 구매사이트 : <a href="https://www.icbanq.com/P008890303?utm_source=google&utm_medium=cpc&utm_campaign=%EC%87%BC%ED%95%91_%EC%A2%85%ED%95%A9&utm_id=%EC%87%BC%ED%95%91_%EC%A2%85%ED%95%A9&utm_term=notset&utm_content=%EC%87%BC%ED%95%91_%EC%A2%85%ED%95%A9&gad_source=1&gclid=CjwKCAiAm-67BhBlEiwAEVftNv5RHoXcFabAq3g__s4Hs3WGbJ2BSN4SGltQBqX32d5kHumnV80bwBoCJTUQAvD_BwE">쿨링 케이스 추천</a>
+
 
 - 부품 조립 후 최종 사진 
 
@@ -248,9 +249,8 @@ dmesg                   # 부팅 및 커널 메시지 확인
 
   
 - 적용 방법 참고 사이트
-    - 라즈베리파이 쿨링 팬 조립 영상 참고
+    - <a href ="https://youtu.be/qEsSK9WIRM4?si=EBuVo_umLaNIKF99">라즈베리파이 쿨링 팬 조립 영상 참고</a>
       <br> 
-      https://youtu.be/qEsSK9WIRM4?si=EBuVo_umLaNIKF99
 
 
 
@@ -420,6 +420,8 @@ sudo raspi-config
 
 
 Interfacing options -> Serial -> No -> Yes 이후 재부팅
+
+
 <img src="https://github.com/user-attachments/assets/29a161e2-0615-4e1d-a047-4327ec8a6341"  width="400" height="300"/>
 
 
@@ -493,8 +495,7 @@ def get_current_location():
 
 
 
-## Numpy를 활용한 정확한 음성 추출 방법 
-### 개발 중 생긴 문제 
+## Numpy를 활용한 정확한 음성 추출 기능 중 발견한 문제 
 -  녹음 중 무음이 삭제되어 음성이 끊겨 녹음이 진행되는 문제가 발생함
   -  해결 방안 :
     -  무음을 감지하는 is_silent() 함수의 사용 방법에 대해 문제를 바꿈<br>
@@ -546,6 +547,57 @@ else:
 ```
 
 <br>
+
+
+## pip 패키지 설치 불가 문제 
+- 해결방법 :
+  ex) pip Speech recognition 을 설치하고 싶은데 커널에서 작성 시 오류가 발생한다
+
+
+  나타나는 오류메세지 
+```
+ERROR: Could not install packages due to an OSError: [Errno 13] Permission denied: '/usr/lib/python3/dist-packages/...'
+Consider using the `--user` option or check your permissions.
+
+```
+
+
+```
+ERROR: Package '...' requires a different Python version than the one installed.
+
+```
+
+
+
+  가상환경으로 변경하여 다운로드 진행
+
+
+가상환경 만들기 
+
+
+  ```
+python3 -m venv myenv
+  ```
+
+가상환경 활성화 후 pip 관련 다운로드 진행 
+
+
+```
+source myenv/bin/activate
+
+```
+
+밑의 방식으로 진행하면 오류 해결 
+
+
+```
+python3 -m venv myenv
+source myenv/bin/activate
+pip install <package>
+```
+
+
+
 
 ## 5. 결론 
 
