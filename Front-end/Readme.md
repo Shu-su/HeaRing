@@ -77,7 +77,7 @@ _위험 발생 시간 확인, 발화위치(지도 및 텍스트), 발화 문장,
 
 | <img src="https://github.com/user-attachments/assets/884a733a-3e79-41f4-8f3d-595458cfd5a5" alt="위험감지" width="250" height="550"/>    | <img src="https://github.com/user-attachments/assets/04726e0c-1282-41d3-a2e6-12b76dd7b09f" alt="레코드화면" width="250" height="550"/>    |  <img src="https://github.com/user-attachments/assets/335abb78-c93c-45f1-a8cd-83d5123bcdb1" alt="팝업1" width="250" height="550"/>   | <img src="https://github.com/user-attachments/assets/451a3361-cb2c-4259-ad43-1d2ff8bb96b0" alt="팝업2" width="250" height="550"/>    |
 |----------------|----------------|----------------|----------------|
-| <p align="center">위험 감지 화면</p> | <p align="center">녹음 화면</p> | <p align="center">상황 종료 팝업_1</p> | <p align="center">상황 종료 팝업_2</p> |
+| <p align="center">위험 감지 화면</p> | <p align="center">녹음 화면</p> | <p align="center">상황 종료 팝업 #1</p> | <p align="center">상황 종료 팝업 #2</p> |
 
 #### 3.3 이전 기록 다시 보기 화면
 
