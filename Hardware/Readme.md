@@ -1,9 +1,6 @@
-# 라즈베리파이 기반 소형 하드웨어 개발 프로젝트 진행과정 
+# 라즈베리파이4 기반 소형 하드웨어 개발 프로젝트 진행과정 
 
-
-<img src="https://github.com/user-attachments/assets/fe76ecc5-ce4a-4b61-8515-3b4dd8951b2f"  width="300" height="300"/>
-
-<img src="https://github.com/user-attachments/assets/0009cea5-94c5-41cd-b9d5-d48be550fa03"  width="300" height="300"/>
+<img src="https://github.com/user-attachments/assets/0009cea5-94c5-41cd-b9d5-d48be550fa03"  width="400" height="300"/>
 
 
 ## 목차
@@ -73,12 +70,6 @@
 <br> 
 
 
-- 추가적인 소형화 개발을 성공적으로 진행 하기 위한 Raspberry Pi Zero 2W 
-  - 제로 2W 부품은, 소형화 개발의 목표에 매우 적합한 장비였지만 성능이 매우 떨어져 우리 팀이 구현해야하는 기능들이 원활하게 개발되어 작동될 것 같지 않다고 판단하였다<br>
-<b> 
-  <img src="https://github.com/user-attachments/assets/c0656d51-317a-461c-811a-fa7d4c78c6b4"  width="300" height="250"/>
-  <img src="https://github.com/user-attachments/assets/6c2b7438-e6ec-4728-88fd-f8f390e07d5e"  width="600" height="250"/>
-  
 
 ## 2. 개발 전 원격제어 환경 구성 방법 
 
@@ -599,6 +590,16 @@ source myenv/bin/activate
 pip install <package>
 ```
 
+
+
+## 소형화 개발의 문제 
+
+- 추가적인 소형화 개발을 성공적으로 진행 하기 위한 Raspberry Pi Zero 2W를 도입하여 적용 시키려 했지만 
+  - 제로 2W 부품은 소형화 개발의 목표에 매우 적합한 장비였지만 성능이 매우 떨어져 우리 팀이 구현해야하는 기능들이 원활하게 개발되어 작동될 것 같지 않다고 판단하였다<br>
+<b> 
+  <img src="https://github.com/user-attachments/assets/c0656d51-317a-461c-811a-fa7d4c78c6b4"  width="300" height="250"/>
+  <img src="https://github.com/user-attachments/assets/6c2b7438-e6ec-4728-88fd-f8f390e07d5e"  width="600" height="250"/>
+  
 
 
 
