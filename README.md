@@ -4,9 +4,13 @@
   <img width='300' src='https://github.com/user-attachments/assets/5582a2e6-4ef8-44b7-93f7-4fe249de1714'><br><br>
   <b>치매 환자 발화패턴 학습 AI를 이용한 위험 상황 감지 및 실종 예방 도우미</b><br><br>
   팀원 소개⦁목적⦁주요 기능⦁인공지능⦁화면구성⦁시스템 구조⦁기술스택
+  <br>
+  [시연 동영상](https://youtu.be/xleeRUj7p3w?si=wiYnkHHRQdZHpAik)
 </p><br>
-<!--   [시연 동영상🖥️](https://youtu.be/xleeRUj7p3w?si=wiYnkHHRQdZHpAik)<br><br>
-  [시연](https://www.youtube.com/watch?v=xleeRUj7p3w) -->
+<br><br>
+[시연동영상](https://youtu.be/xleeRUj7p3w?si=wiYnkHHRQdZHpAik)
+[시연동영상] (https://www.youtube.com/watch?v=xleeRUj7p3w)
+[ㅇㅇㅇ](https://velog.io/@zerra18/Github%EC%97%90-READ.me%EB%A5%BC-%EC%9E%91%EC%84%B1%ED%95%B4%EB%B3%B4%EC%9E%90-Markdown-%EB%AC%B8%EB%B2%95)
 
 > 한양여자대학교 스마트IT과 캡스톤디자인 졸업작품 수제지능팀입니다.<br>
 > 개발기간 : 2024.04 ~ 2024.11
