@@ -2,12 +2,11 @@
 <p align='center'>
 <img width='300' src='https://github.com/user-attachments/assets/a52ab25a-7ea0-475a-9e44-27f1d7586c6d'>
 <img width='300' src='https://github.com/user-attachments/assets/5582a2e6-4ef8-44b7-93f7-4fe249de1714'><br><br>
-<b>치매 환자 발화패턴 학습 AI를 이용한 위험 상황 감지 및 실종 예방 도우미</b><br><br></p><br>
+<b>치매 환자 발화패턴 학습 AI를 이용한 위험 상황 감지 및 실종 예방 도우미</b><br><br></p>
 
 > 한양여자대학교 스마트IT과 캡스톤디자인 졸업작품 수제지능팀입니다.<br>
 > 개발기간 : 2024.04 ~ 2024.11
 <br>
-
 
 ## 팀원 소개 🧑🏻‍🧑‍🧒🏽
 |황혜진|오지현|전희주|옥지원|
