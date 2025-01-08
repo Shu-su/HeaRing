@@ -395,7 +395,7 @@ dmesg                   # 부팅 및 커널 메시지 확인
 <br>
 구매 제품: https://www.devicemart.co.kr/goods/view?no=1342149
  
-<br> 5핀으로 연결 가능 
+<br> USB 포트로 연결 가능 
 <br> 
 <img src="https://github.com/user-attachments/assets/997dc08c-eb9d-4e17-87ce-de90fb1726b5"  width="400" height="300"/>
 
