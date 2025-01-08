@@ -2,8 +2,9 @@
 해당 디렉토리에 있는 extract-data.zip, GPS WebSocket.zip 파일을 서버가 있는 AWS 프로젝트 내 Lambda에 업로드하여 사용합니다.
 
 ## 1. 메타데이터 추출 (S3 Event Handler)
+- 단말기에서 S3로 업로드한 .mp3 파일로부터 메타데이터를 추출하고 DB에 저장할 수 있는 형태로 변환, API를 호출하는 함수입니다.
 
-1. AWS Lambda 콘솔에서 새로운 함수를 생성한다.
+1. **AWS Lambda 콘솔**에서 새로운 함수를 생성한다.
    - **함수 이름**: `extract-data`
    - **런타임**: Python 3.13
    - **아키텍처**: x86_64
@@ -17,8 +18,9 @@
 ---
 
 ## 2. 실시간 위치 확인 (GPS-WebSocket)
+- 안드로이드 앱에서 GPS 화면을 열었을 때 단말기로 MQTT 메시지를 전송하여 실시간 위치 정보를 전달하도록 하는 함수 및 WebSocket API입니다.
 
-1. AWS Lambda 콘솔에서 새로운 함수를 생성한다.
+1. **AWS Lambda 콘솔**에서 새로운 함수를 생성한다.
    - **함수 이름**: `GPS-WebSocket`
    - **런타임**: Python 3.13
    - **아키텍처**: x86_64
