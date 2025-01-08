@@ -1,7 +1,9 @@
 # 헤아Ring - [ HW ] Readme 🌱 라즈베리파이4 기반 프로젝트 개발과정 
+<img src="https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black"  width="150" height="50"/> <img src="https://img.shields.io/badge/-Raspberry_Pi-C51A4A?style=for-the-badge&logo=Raspberry-Pi"  width="200" height="50"/> <img src="https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54"  width="150" height="50"/> <img src="https://img.shields.io/badge/numpy-%23013243.svg?style=for-the-badge&logo=numpy&logoColor=white"  width="150" height="50"/> <img src="https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white"  width="145" height="50"/>
+
+
 
 <img src="https://github.com/user-attachments/assets/0009cea5-94c5-41cd-b9d5-d48be550fa03"  width="400" height="300"/>
-
 
 ## <목차>
 ### 1.[개요](#1-개요) <br>
