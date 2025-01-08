@@ -1,13 +1,13 @@
-## 헤아Ring - [ Front-end ] Readme :seedling:
+# 헤아Ring - [ Front-end ] Readme :seedling:
 
 ![Android Studio](https://img.shields.io/badge/Android_Studio-3DDC84?style=for-the-badge&logo=android-studio&logoColor=white)
 ![Flutter](https://img.shields.io/badge/Flutter-02569B?style=for-the-badge&logo=flutter&logoColor=white)
 ![Dart](https://img.shields.io/badge/Dart-0175C2?style=for-the-badge&logo=dart&logoColor=white)
    
-### 1. App 구성도
+## 1. App 구성도
 ![app구성도](https://github.com/user-attachments/assets/1f5c792f-bcb7-4a5a-b516-ebcca10c25eb)
 
-### 2. 필수 라이브러리
+## 2. 필수 라이브러리
 
 프로젝트를 시작하기 전에 다음 라이브러리를 반드시 설치해야 합니다. <br>   
 지도는 네이버 지도 API를, 알림 서비스는 **Firebase Cloud Messaging(FCM)**을 사용합니다. <br>
@@ -40,7 +40,7 @@
 ##### 기타
 - `intl`: 날짜와 숫자의 국제화 처리를 위한 라이브러리
 
-### 3. 주요 기능
+## 3. 주요 기능
 
 #### 3.1 메인화면 및 알림 목록
 **메인화면** <br>
