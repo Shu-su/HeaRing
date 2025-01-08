@@ -42,3 +42,46 @@
 
 ### 3. 주요 기능
 
+#### 3.1 메인화면 및 알림 목록
+**메인화면** <br>
+메인화면에서 치매 환자의 외출, 귀가, 위험 상태를 정보를 제공합니다. <br>
+정보를 제공하기 위해 Fcm 에서 수신한 메세지를 provider 및 shared_preferences 라이브러리를 활용하여 UI를 즉각 업데이트합니다.<br> 
+위험 상황으로 돌아가기를 버튼을 누르면 알림 목록 팝업이 열리며 원하는 위험 상황을 확인할 수 있습니다.<br>
+이전기록 다시보기 및 GPS 화면으로 이동할 수 있습니다. 
+
+**알림 목록**<br>
+수신한 메세지의 data가 있으면 recodeid 및 notificationId, timestamp 값을 저장합니다. <br>
+provider 및 shared_preferences 라이브러리를 활용되며, 사용자가 열람한 데이터는 회색, 미확인 데이터는 하늘색배경으로 표시됩니다. <br>
+* recodeid - 서버에 데이터 조회 요청을 하기 위해 사용
+* notificationId - 읽음 처리 작업에 사용
+* timestamp - 사용자 편의
+
+알림 목록
+
+|               |               |
+|---------------|---------------|
+| <img src="https://github.com/user-attachments/assets/a3d34466-7c52-411e-a99d-dbb744537ebe" alt="메인화면" width="250" height="550"/> | <img src="https://github.com/user-attachments/assets/d251da22-61ed-427b-80ce-631f424df9e2" alt="알림목록" width="250" height="550"/> |
+| <p align="center">메인 화면</p> | <p align="center">알림 목록</p> |
+
+#### 3.2 위험감지 화면 및 녹음 화면
+**위험 감지 화면** <br>
+위험 감지 화면에서는 <br> 
+_위험 발생 시간 확인, 발화위치(지도 및 텍스트), 발화 문장, 녹음 듣기 (녹음 화면으로 이동), 현재 위치 확인 (GPS 화면으로 이동)_ 기능을 제공합니다. <br>
+
+**녹음 듣기 화면** <br>
+치매 환자의 실제 발화 내용을 녹음 파일을 통해 들어볼 수 있습니다.
+
+**위험 상황 종료 팝업** <br>
+위험 상황을 종료할 때 사용자가 실제 위험 상황이었는지 확인하여 해당 정보를 저장할 수 있습니다.<br>
+저장된 정보는 이전기록 다시보기에서 확인할 수 있습니다. 
+
+| <img src="https://github.com/user-attachments/assets/884a733a-3e79-41f4-8f3d-595458cfd5a5" alt="위험감지" width="250" height="550"/>    | 셀 1,2 내용    |  <img src="https://github.com/user-attachments/assets/335abb78-c93c-45f1-a8cd-83d5123bcdb1" alt="팝업1" width="250" height="550"/>   | <img src="https://github.com/user-attachments/assets/451a3361-cb2c-4259-ad43-1d2ff8bb96b0" alt="팝업2" width="250" height="550"/>    |
+|----------------|----------------|----------------|----------------|
+| <p align="center">위험 감지 화면</p> | <p align="center">녹음 화면</p> | <p align="center">상황 종료 팝업_1</p> | <p align="center">상황 종료 팝업_2</p> |
+
+
+
+
+<img src="https://github.com/user-attachments/assets/d251da22-61ed-427b-80ce-631f424df9e2" alt="알림목록" width="200" height="550"/>
+
+
