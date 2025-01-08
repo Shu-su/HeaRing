@@ -91,9 +91,13 @@
 - 전원 연결 후 작성한 네트워크 설정했던 내용을 기반으로 네트워크 연결을 통해 보드의 IP 주소를 알아내기
   - 기존 Raspberrypi imager 을 설치 후 작성 했던 네트워크 아이디와 같은 네트워크를 연결 한다.
   - 연결 된 네트워크의 IP주소를 확인 한다
-    <br>
+    - ex) 노트북의 핫스팟으로 연결 한다면, 노트북의 설정에서 "네트워크 및 인터넷" 메뉴에서 연결된 보드의 네트워크 IP를 확인 할 수 있다
+      <img src="https://github.com/user-attachments/assets/c59c4f58-d87d-4a0c-97bb-43c789ef9b4c"  width="300" height="70"/>
+      
+
+
     
-- IP 주소를 기반으로 Putty를 사용해 보드에 접속하고 로그인한다.<br>
+- 확인된 IP 주소를 기반으로 Putty를 사용해 보드에 접속하고 로그인한다.<br>
 <br> 
 <img src="https://github.com/user-attachments/assets/b53d14a0-ce1e-4ce3-8462-73ba1eca0c3d"  width="350" height="300"/>
 <br>
@@ -215,9 +219,10 @@ dmesg                   # 부팅 및 커널 메시지 확인
     - 구매 사이트 : https://www.coupang.com/vp/products/7429911069?itemId=19294690189&vendorItemId=86409354176
 
   - <소형 마이크>
-    - 구매 사이트 : 슈퍼 미니 USB 2.0 마이크, 휴대용 스튜디오 음성 마이크, 오디오 어댑터 드라이버, 노트북, PC, MSN, 스카이프용, 신제품
+    - 구매 사이트 : <a href="https://ko.aliexpress.com/item/1005006411600203.html?src=google&pdp_npi=4%40dis%21KRW%211880%211471%21%21%21%21%21%40%2112000037070277039%21ppc%21%21%21&src=google&albch=shopping&acnt=298-731-3000&isdl=y&slnk=&plac=&mtctp=&albbt=Google_7_shopping&aff_platform=google&aff_short_key=UneMJZVf&gclsrc=aw.ds&&albagn=888888&&ds_e_adid=&ds_e_matchtype=&ds_e_device=c&ds_e_network=x&ds_e_product_group_id=&ds_e_product_id=ko1005006411600203&ds_e_product_merchant_id=516326659&ds_e_product_country=KR&ds_e_product_language=ko&ds_e_product_channel=online&ds_e_product_store_id=&ds_url_v=2&albcp=21445427499&albag=&isSmbAutoCall=false&needSmbHouyi=false&gad_source=1&gclid=EAIaIQobChMIh4m69pnWigMVRtEWBR2etj3sEAQYASABEgItRvD_BwE">슈퍼 미니 USB 2.0 마이크, 휴대용 스튜디오 음성 마이크, 오디오 어댑터 드라이버, 노트북, PC, MSN, 스카이프용, 신제품</a> 
        
-    https://ko.aliexpress.com/item/1005006411600203.html?src=google&pdp_npi=4%40dis%21KRW%211880%211471%21%21%21%21%21%40%2112000037070277039%21ppc%21%21%21&src=google&albch=shopping&acnt=298-731-3000&isdl=y&slnk=&plac=&mtctp=&albbt=Google_7_shopping&aff_platform=google&aff_short_key=UneMJZVf&gclsrc=aw.ds&&albagn=888888&&ds_e_adid=&ds_e_matchtype=&ds_e_device=c&ds_e_network=x&ds_e_product_group_id=&ds_e_product_id=ko1005006411600203&ds_e_product_merchant_id=516326659&ds_e_product_country=KR&ds_e_product_language=ko&ds_e_product_channel=online&ds_e_product_store_id=&ds_url_v=2&albcp=21445427499&albag=&isSmbAutoCall=false&needSmbHouyi=false&gad_source=1&gclid=EAIaIQobChMIh4m69pnWigMVRtEWBR2etj3sEAQYASABEgItRvD_BwE
+
+
 
   - <GPS 모듈>
     - 구매 사이트 : https://www.devicemart.co.kr/goods/view?no=1342149
@@ -452,21 +457,38 @@ ex) DEVICES="/dev/ttyUSB0" <br>
 gpsmon 또는 cgps -s
 ```
 
-<img src="https://github.com/user-attachments/assets/e811a290-0738-4fbb-898e-074122182879
-"  width="400" height="300"/>
+<img src="https://github.com/user-attachments/assets/861fcf90-ea0c-4d7d-90aa-b84004fcd0a5"  width="400" height="300"/>
+
+
+gps 센서 사용 방법 출처: https://github.com/ayj8655/RaspberryPi_wutchout?tab=readme-ov-file
+
+
+- gps 위치추출 
+gpsd 라이브러리를 사용하여 위치데이터 요청 후 처리 , 예외처리를 안정적으로 수행하기위해 try문 사용
 
 
 
 
+```python 
+import gpsd
 
+def get_current_location():
+    try:
+        gpsd.connect()
 
+        packet = gpsd.get_current()
 
+        if packet.mode >= 2: 
+            latitude, longitude = packet.position()
+            print(f"현재 위치: 위도 {latitude}, 경도 {longitude}")
+            return latitude, longitude
 
-
-
-
-
-
+        print("유효한 GPS 데이터를 찾을 수 없습니다.")
+        return None
+    except Exception as e:
+        print(f"GPS 모듈 오류: {e}")
+        return None
+```
 
 
 
@@ -478,16 +500,6 @@ gpsmon 또는 cgps -s
     -  무음을 감지하는 is_silent() 함수의 사용 방법에 대해 문제를 바꿈<br>
     문제는 코드에서 is_silent() 함수는 오디오 데이터를 무음인지 판단하는 기준으로 사용되고 있었다 <br>
 
-
-- 실시간 위치 데이터 출력 방법 
-
-```
-gpsmon 
-```
-명령어 입력하여 gps 센서가 잘 동작 하는지 확인한다. 
-
-
-
 ````python 
 if is_silent(data):
     if recording:
@@ -498,18 +510,25 @@ if is_silent(data):
     continue
 else:
     silent_chunks = 0
+````
 
-```
+
+
+
+
 - 이 로직에서 무음 구간이 감지되면, silent_chunks를 증가시키며 무음이 지정된 기간 이상 지속될 경우 녹음을 종료한다 
 - 무음 데이터(data)는 녹음 중인 프레임(frames)에 추가되지 않습니다. 따라서 녹음 파일에서는 무음 구간이 삭제된 결과가 나타난 것
   - 무음을 "녹음 중지"의 신호로 간주<br> 
     코드 구조상 무음 구간은 "녹음이 종료되는 신호"로 동작하고 있습니다. 무음 데이터가 프레임에 추가되지 않으므로 무음 구간이 사라지게 된다. 
 
 ### 문제해결 방법
-  - < 무음 데이터도 프레임에 추가><br>
-    - 무음 데이터(data)를 삭제하지 않고, 항상 frames에 추가되도록 수정함. 이렇게 하면 무음 구간도 녹음 파일에 포함되어 무음까지 감지되어 원본 녹음 파일을 저장할 수 있게 됨
+무음 데이터도 프레임에 추가<br>
+무음 데이터(data)를 삭제하지 않고, 항상 frames에 추가되도록 수정함. 이렇게 하면 무음 구간도 녹음 파일에 포함되어 무음까지 감지되어 원본 녹음 파일을 저장할 수 있게 됨
 
-````python 
+
+
+
+```python
 if is_silent(data):
     if recording:
         silent_chunks += 1
@@ -524,8 +543,8 @@ else:
         recording = True
         recording_start_time = datetime.now()
     frames.append(data)  # 소음 데이터도 프레임에 추가
+```
 
-````
 <br>
 
 ## 5. 결론 
