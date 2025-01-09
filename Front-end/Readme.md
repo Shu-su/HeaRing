@@ -3,7 +3,7 @@
 ![Android Studio](https://img.shields.io/badge/Android_Studio-3DDC84?style=for-the-badge&logo=android-studio&logoColor=white)
 ![Flutter](https://img.shields.io/badge/Flutter-02569B?style=for-the-badge&logo=flutter&logoColor=white)
 ![Dart](https://img.shields.io/badge/Dart-0175C2?style=for-the-badge&logo=dart&logoColor=white)
-   
+    
 ## 1. App 구성도
 ![app구성도](https://github.com/user-attachments/assets/1f5c792f-bcb7-4a5a-b516-ebcca10c25eb)
 
