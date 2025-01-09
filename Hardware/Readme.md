@@ -21,7 +21,9 @@
 ### 개발시 사용한 부품 설명 및 적용 
 - 필요한 부품
 - 부품 조립 후 최종 사진 
-- 적용 방법 참고 사이트 
+- 적용 방법 참고 사이트
+
+
 
 
 ### 하드웨어 로직 & 코드 구성 및 이슈해결 
@@ -293,7 +295,7 @@ dmesg                   # 부팅 및 커널 메시지 확인
 
   
 ### 3) 적용 방법 참고 사이트
-<a href ="https://youtu.be/qEsSK9WIRM4?si=EBuVo_umLaNIKF99">라즈베리파이 쿨링 팬 조립 영상 참고</a>
+_<a href ="https://youtu.be/qEsSK9WIRM4?si=EBuVo_umLaNIKF99">라즈베리파이 쿨링 팬 조립 영상 참고</a>_
       <br> 
 
 
