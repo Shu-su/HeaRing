@@ -89,79 +89,26 @@
 │  │     │  │  └─ org
 │  │     │  │     └─ hdmd
 │  │     │  │        └─ hearingdemo
-│  │     │  │           ├─ DirtyChecking.java
 │  │     │  │           ├─ HearingDemoApplication.java
-│  │     │  │           ├─ config
-│  │     │  │           │  ├─ AWSConfig.java
-│  │     │  │           │  ├─ HearingConfig.java
-│  │     │  │           │  ├─ SwaggerConfig.java
-│  │     │  │           │  └─ WebSocketConfig.java
-│  │     │  │           ├─ controller
-│  │     │  │           │  ├─ DeviceManager.java
-│  │     │  │           │  ├─ GlobalExceptionHandler.java
-│  │     │  │           │  ├─ HistoryController.java
-│  │     │  │           │  ├─ LocationController.java
-│  │     │  │           │  ├─ NotificationController.java
-│  │     │  │           │  └─ RecordingController.java
-│  │     │  │           ├─ dto
-│  │     │  │           │  ├─ DeviceManageDTO.java
-│  │     │  │           │  ├─ DeviceMonitorDTO.java
-│  │     │  │           │  ├─ DeviceStatusUpdateDTO.java
-│  │     │  │           │  ├─ HistoryDTO.java
-│  │     │  │           │  ├─ LocationDataDTO.java
-│  │     │  │           │  ├─ RecordingDTO.java
-│  │     │  │           │  ├─ RecordingDownloadDTO.java
-│  │     │  │           │  ├─ RecordingInfoDTO.java
-│  │     │  │           │  ├─ RecordingSendDTO.java
-│  │     │  │           │  └─ UserDTO.java
-│  │     │  │           ├─ exception
-│  │     │  │           │  ├─ DeviceNotFoundException.java
-│  │     │  │           │  ├─ GlobalExceptionHandler.java
-│  │     │  │           │  ├─ HistoryNotFoundException.java
-│  │     │  │           │  └─ RecordingNotFoundException.java
-│  │     │  │           ├─ handler
-│  │     │  │           │  └─ WebsocketHandler.java
-│  │     │  │           ├─ model
-│  │     │  │           │  ├─ Notification.java
-│  │     │  │           │  ├─ User.java
-│  │     │  │           │  ├─ device
-│  │     │  │           │  │  └─ Device.java
-│  │     │  │           │  └─ recording
-│  │     │  │           │     ├─ History.java
-│  │     │  │           │     └─ Recording.java
-│  │     │  │           ├─ repository
-│  │     │  │           │  ├─ DeviceRepository.java
-│  │     │  │           │  ├─ HistoryRepository.java
-│  │     │  │           │  ├─ LocationRepository.java
-│  │     │  │           │  ├─ NotificationRepository.java
-│  │     │  │           │  ├─ RecordingRepository.java
-│  │     │  │           │  └─ UserRepository.java
-│  │     │  │           ├─ security
-│  │     │  │           │  └─ JwtAuthenticationFilter.java
-│  │     │  │           ├─ service
-│  │     │  │           │  ├─ AIService.java
-│  │     │  │           │  ├─ ClovaSpeechClient.java
-│  │     │  │           │  ├─ DeviceService.java
-│  │     │  │           │  ├─ HistoryService.java
-│  │     │  │           │  ├─ NotificationManager.java
-│  │     │  │           │  ├─ NotificationService.java
-│  │     │  │           │  ├─ NotificationStatus.java
-│  │     │  │           │  └─ RecordingService.java
-│  │     │  │           └─ util
-│  │     │  │              └─ JwtUtil.java
+│  │     │  │           ├─ config : AWS 및 Swagger를 위한 설정
+│  │     │  │           ├─ controller : RESTful API  엔드포인트 관련 컨트롤러 레이어
+│  │     │  │           ├─ dto : 프로세스별로 필요한 데이터 DTO
+│  │     │  │           ├─ exception : 예외 처리
+│  │     │  │           ├─ model : 사용자, 단말기, 알림, 녹음데이터, 기록 엔티티 
+│  │     │  │           ├─ repository : 각 엔티티와 DB 테이블 매핑을 위한 리포지토리 
+│  │     │  │           └─ service : AI 호출, Clova 호출, 데이터 CRUD, 알림 전송 등의 서비스 레이어
 │  │     │  └─ resources
-│  │     │     └─ application.properties
+│  │     │     └─ application.properties : 프로그램 실행에 필요한 속성
 │  │     └─ test
 │  │        └─ java
 │  │           └─ org
 │  │              └─ hdmd
-│  │                 └─ hearingdemo
-│  │                    ├─ HearingDemoApplicationTests (2).java
-│  │                    └─ HearingDemoApplicationTests.java
-│  └─ serverless
-│     ├─ GPSwebsocket.zip
-│     ├─ README.md
-│     └─ extract-data.zip
+│  │                 └─ hearingdemo 
+│  │                    └─ HearingDemoApplicationTests.java : 테스트를 위한 실행 프로그램(실사용 X)
+│  └─ serverless : AWS의 Lambda에 업로드하여 사용하는 서버리스 함수 패키지 파일
+│     ├─ GPSwebsocket.zip : 단말기의 실시간 위치 확인 
+│     ├─ extract-data.zip : 단말기에서 업로드한 녹음 파일의 메타데이터 추출
+│     └─ README.md 
 ├─ Front-end 프론트엔드
 │  ├─ Readme.md
 │  ├─ android
@@ -230,6 +177,11 @@
 
 ### 백엔드
 ![](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)
+![](https://img.shields.io/badge/Spring-6DB33F?style=for-the-badge&logo=spring&logoColor=white)
+![](https://img.shields.io/badge/Amazon_AWS-232F3E?style=for-the-badge&logo=amazon-aws&logoColor=white)
+![](https://img.shields.io/badge/Amazon%20DynamoDB-4053D6?style=for-the-badge&logo=Amazon%20DynamoDB&logoColor=white)
+![](https://img.shields.io/badge/MySQL-005C84?style=for-the-badge&logo=mysql&logoColor=white)
+![](https://img.shields.io/badge/IntelliJ_IDEA-000000.svg?style=for-the-badge&logo=intellij-idea&logoColor=white)
 <br>
 
 ### 프론트엔드
