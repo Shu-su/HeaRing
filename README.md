@@ -246,8 +246,8 @@
 │  │     └─ main_widget.dart
 │  └─ pubspec.yaml
 ├─ Hardware
-│  ├─ Readme.md
-│  └─ raspberrypi.py
+│  ├─ Readme.md 
+│  └─ raspberrypi.py : 개발 소스코드
 └─ README.md
 ```
 
@@ -288,6 +288,8 @@
 ![](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
 ![](https://img.shields.io/badge/Amazon_AWS-232F3E?style=for-the-badge&logo=amazon-aws&logoColor=white)
 ![](https://img.shields.io/badge/Visual_Studio_Code-0078D4?style=for-the-badge&logo=visual%20studio%20code&logoColor=white)
+![](https://img.shields.io/badge/numpy-%23013243.svg?style=for-the-badge&logo=numpy&logoColor=white)
+
 
 
 
