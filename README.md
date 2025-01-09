@@ -166,50 +166,18 @@
 │  ├─ Readme.md
 │  ├─ android
 │  │  ├─ app
-│  │  │  ├─ build.gradle
-│  │  │  ├─ google-services.json
 │  │  │  └─ src
 │  │  │     ├─ debug
-│  │  │     │  └─ AndroidManifest.xml
 │  │  │     ├─ main
 │  │  │     │  ├─ AndroidManifest.xml
 │  │  │     │  ├─ java
-│  │  │     │  │  └─ io
-│  │  │     │  │     └─ flutter
-│  │  │     │  │        └─ plugins
-│  │  │     │  │           └─ GeneratedPluginRegistrant.java
 │  │  │     │  ├─ kotlin
-│  │  │     │  │  └─ com
-│  │  │     │  │     └─ example
-│  │  │     │  │        └─ test_hearing
-│  │  │     │  │           └─ MainActivity.kt
 │  │  │     │  └─ res
-│  │  │     │     ├─ drawable-v21
-│  │  │     │     │  └─ launch_background.xml
-│  │  │     │     ├─ drawable
-│  │  │     │     │  └─ launch_background.xml
-│  │  │     │     ├─ mipmap-hdpi
-│  │  │     │     │  └─ ic_launcher.png
-│  │  │     │     ├─ mipmap-mdpi
-│  │  │     │     │  └─ ic_launcher.png
-│  │  │     │     ├─ mipmap-xhdpi
-│  │  │     │     │  └─ ic_launcher.png
-│  │  │     │     ├─ mipmap-xxhdpi
-│  │  │     │     │  └─ ic_launcher.png
-│  │  │     │     ├─ mipmap-xxxhdpi
-│  │  │     │     │  └─ ic_launcher.png
-│  │  │     │     ├─ values-night
-│  │  │     │     │  └─ styles.xml
-│  │  │     │     └─ values
-│  │  │     │        └─ styles.xml
 │  │  │     └─ profile
 │  │  │        └─ AndroidManifest.xml
 │  │  ├─ build.gradle
 │  │  ├─ gradle.properties
 │  │  ├─ gradle
-│  │  │  └─ wrapper
-│  │  │     ├─ gradle-wrapper.jar
-│  │  │     └─ gradle-wrapper.properties
 │  │  ├─ gradlew
 │  │  ├─ gradlew.bat
 │  │  ├─ local.properties
