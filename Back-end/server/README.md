@@ -1,7 +1,6 @@
 # Back-end Server 업로드 소스
 
-해당 디렉토리를 헤아Ring 프로젝트의 백엔드 서버에 업로드하여 사용합니다.
-
+해당 디렉토리를 헤아Ring 프로젝트의 백엔드 서버에 업로드하여 사용합니다. <br>
 Spring Boot를 기반으로 RESTful API를 제공하며, AWS EC2에서 구현되는 것을 전제로 합니다. 
 
 ## 주요 기능
@@ -10,15 +9,16 @@ Spring Boot를 기반으로 RESTful API를 제공하며, AWS EC2에서 구현되
 - 위험 감지 및 알림 전송: 위험으로 판단된 데이터를 보호자가 확인할 수 있도록 알림을 발송합니다.
 - 위험상황 데이터 조회 및 저장: 보호자의 판단 하에 데이터를 처리할 수 있도록 조회 및 기록으로 저장 기능을 제공합니다.
 
-## 주요 기술 스택
+## 개발 환경 
 - **프레임워크**: Spring Boot
 - **데이터베이스**: MySQL
-- **배포 환경**: AWS EC2
-- **기타**: AWS S3, Firebase FCM
-  
+- **배포 환경**: AWS EC2 t2.micro 인스턴스 사용
+- **알림 서비스**: Firebase FCM 
+- **IDE**: IntelliJ IDEA  
+- **빌드 도구**: Maven  
+- **운영 체제**: Ubuntu 20.04  
+
 ---
-
-
 
 # 실행 방법
 
@@ -103,6 +103,5 @@ mysql -h <RDS_ENDPOINT> -u <DB_USERNAME> -p
 ---
 
 ## API 문서 확인
-해당 프로젝트에서 사용되는 REST API 명세서는 Swagger를 통해 제공됩니다.
-
-로컬 서버 실행 후 http://localhost:8080/swagger-ui.html에서 확인하실 수 있습니다.
+해당 프로젝트에서 사용되는 REST API 명세서는 Swagger를 통해 제공됩니다. <br>
+로컬 서버 실행 후 http://localhost:8080/swagger-ui.html 에서 확인하실 수 있습니다.
