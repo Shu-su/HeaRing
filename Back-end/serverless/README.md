@@ -1,4 +1,4 @@
-# Back-end Server 업로드 소스
+# 헤아Ring - [ BE ] AWS Lambda 업로드 소스
 해당 디렉토리에 있는 extract-data.zip, GPS WebSocket.zip 파일을 서버가 있는 AWS 프로젝트 내 Lambda에 업로드하여 사용합니다.
 
 ## 1. 메타데이터 추출 (S3 Event Handler)
