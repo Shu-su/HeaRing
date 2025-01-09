@@ -162,7 +162,7 @@
 │     ├─ GPSwebsocket.zip
 │     ├─ README.md
 │     └─ extract-data.zip
-├─ Front-end
+├─ Front-end 프론트엔드
 │  ├─ Readme.md
 │  ├─ android
 │  │  ├─ app
@@ -184,35 +184,34 @@
 │  │  ├─ settings.gradle
 │  │  └─ test_hearing_android.iml
 │  ├─ assets
-│  │  ├─ background.jpg
-│  │  └─ logo.png
+│  │  ├─ background.jpg : 스플래시 배경색
+│  │  └─ logo.png : 헤아Ring 로고 아이콘
 │  ├─ lib
-│  │  ├─ danger.dart
+│  │  ├─ danger.dart : 위험 감지 화면
 │  │  ├─ firebase_options.dart
 │  │  ├─ gps.dart
-│  │  ├─ history.dart
-│  │  ├─ http
+│  │  ├─ history.dart : 이전 기록 다시 보기 화면
+│  │  ├─ http : 서버 통신 폴더
 │  │  │  ├─ get_dangerdata.dart
 │  │  │  ├─ get_historydata.dart
 │  │  │  ├─ put_readnoti.dart
 │  │  │  ├─ reverse_geocoding.dart
 │  │  │  ├─ save_dangerdata.dart
 │  │  │  └─ update_dangerdata.dart
-│  │  ├─ main.dart
-│  │  ├─ recode.dart
-│  │  ├─ service
+│  │  ├─ main.dart : 메인 화면
+│  │  ├─ recode.dart : 녹음 재생 화면
+│  │  ├─ service : 알림 저장 및 업데이트 관리 폴더
 │  │  │  ├─ fcm_service.dart
 │  │  │  ├─ notification_provider.dart
 │  │  │  └─ recode_provider.dart
-│  │  ├─ test_main.dart
-│  │  └─ widget
+│  │  └─ widget : 위젯 폴더
 │  │     ├─ danger_fin_widget.dart
 │  │     ├─ danger_gpswidget.dart
 │  │     ├─ danger_playpopup.dart
 │  │     ├─ danger_widget.dart
 │  │     ├─ main_notificationlist.dart
 │  │     └─ main_widget.dart
-│  └─ pubspec.yaml
+│  └─ pubspec.yaml : 프로젝트 설정 파일
 ├─ Hardware
 │  ├─ Readme.md 
 │  └─ raspberrypi.py : 개발 소스코드
