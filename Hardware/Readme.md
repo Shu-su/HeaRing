@@ -297,7 +297,7 @@ dmesg                   # 부팅 및 커널 메시지 확인
 
   
 ### 적용 방법 참고 사이트
-    - <a href ="https://youtu.be/qEsSK9WIRM4?si=EBuVo_umLaNIKF99">라즈베리파이 쿨링 팬 조립 영상 참고</a>
+<a href ="https://youtu.be/qEsSK9WIRM4?si=EBuVo_umLaNIKF99">라즈베리파이 쿨링 팬 조립 영상 참고</a>
       <br> 
 
 
