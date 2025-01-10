@@ -114,7 +114,7 @@ git clone https://huggingface.co/WarrWang/fordanger1
 ## 3️⃣ 딥러닝 서버에 모델 배포
 <p align='center'><img width='60%' src='https://github.com/user-attachments/assets/3ea10949-0e9f-4657-9ccf-e74bb547408f'></p><br>
 
-> 단말기에서 수집된 녹음 파일 ⇒ STT 처리 ⇒ **딥러닝 서버 -발화 문장의 위험도 판단** <br>
+> 단말기에서 수집된 녹음 파일 ⇒ STT 처리 ⇒ **발화 문장의 위험도 판단** <br>
 > 'aiServer' 디렉터리 내의 소스코드를 통해 발화 문장이 위험 발화인지를 예측합니다. <br>
 > - app_flask.py : Flask 서버 시작, 예측 결과 반환 <br>
 > - model.py : 모델 핸들러 역할 (모델 초기화, 추론 메서드 존재) <br>
