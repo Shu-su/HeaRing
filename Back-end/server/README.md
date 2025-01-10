@@ -1,5 +1,10 @@
 # 헤아Ring - [ BE ] 서버 업로드 소스 
 
+![](https://img.shields.io/badge/Spring-6DB33F?style=for-the-badge&logo=spring&logoColor=white)
+![](https://img.shields.io/badge/Amazon_AWS-232F3E?style=for-the-badge&logo=amazon-aws&logoColor=white)
+![](https://img.shields.io/badge/MySQL-005C84?style=for-the-badge&logo=mysql&logoColor=white)
+
+
 해당 디렉토리를 헤아Ring 프로젝트의 백엔드 서버에 업로드하여 사용합니다. <br>
 Spring Boot를 기반으로 RESTful API를 제공하며, AWS EC2에서 구현되는 것을 전제로 합니다. 
 
