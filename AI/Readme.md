@@ -25,13 +25,13 @@ AI 개발은 다음 단계로 진행되었습니다. 잘 정리된 PPT 이미지
 ---
 
 ## 위험 상황 판단 위해 NLP 분류 'Bert' 모델 선택
-<img width='80%' src='https://github.com/user-attachments/assets/32ee022c-433f-417a-8b0b-8ba38f36d1ee'>
+<img width='' src='https://github.com/user-attachments/assets/32ee022c-433f-417a-8b0b-8ba38f36d1ee'>
 <br><br>
 
 ---
 
 ## 발화 데이터셋 구축
-<img width='80%' src='https://github.com/user-attachments/assets/149247f3-8345-4a90-859b-dfbb7254fa5b'><br><br>
+<img width='' src='https://github.com/user-attachments/assets/149247f3-8345-4a90-859b-dfbb7254fa5b'><br><br>
 
 ### 1️⃣ 데이터 수집
 > 데이터 수집은 AI Hub에서 제공하는 데이터로 정상 발화 데이터셋을 구축하였습니다. <br>
@@ -54,7 +54,7 @@ AI 개발은 다음 단계로 진행되었습니다. 잘 정리된 PPT 이미지
 
 ---
 ## 모델 훈련
-<img width='80%' src='https://github.com/user-attachments/assets/fdb09a9f-a6d5-49d3-b67e-0462c6cf60a0'>
+<img width='' src='https://github.com/user-attachments/assets/fdb09a9f-a6d5-49d3-b67e-0462c6cf60a0'>
 <br><br>
 
 > (첨부된 코드 **'3_위험상황판단AI_KoBERT.ipynb'로 진행**) <br>
@@ -66,7 +66,7 @@ AI 개발은 다음 단계로 진행되었습니다. 잘 정리된 PPT 이미지
 ---
 
 ## 모델 성능
-<img width='80%' src='https://github.com/user-attachments/assets/beba0029-9b57-4cd2-9c81-2bda0d018473'>
+<img width='' src='https://github.com/user-attachments/assets/beba0029-9b57-4cd2-9c81-2bda0d018473'>
 <br><br>
 
 > 테스트를 하다 보니 위험발화 데이터에 과적합된 양상을 보이기에 **정상발화 데이터를 추가**하여 해결하였습니다.
