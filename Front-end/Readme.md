@@ -49,6 +49,7 @@
 위험 상황으로 돌아가기를 버튼을 누르면 알림 목록 팝업이 열리며 원하는 위험 상황을 확인할 수 있습니다.<br>
 이전기록 다시보기 및 GPS 화면으로 이동할 수 있습니다. 
 
+
 **알림 목록**<br>
 수신한 메세지의 data가 있으면 recodeid 및 notificationId, timestamp 값을 저장합니다. <br>
 provider 및 shared_preferences 라이브러리를 활용되며, 사용자가 열람한 데이터는 회색, 미확인 데이터는 하늘색배경으로 표시됩니다. <br>
@@ -60,6 +61,7 @@ provider 및 shared_preferences 라이브러리를 활용되며, 사용자가 �
 | <img src="https://github.com/user-attachments/assets/a3d34466-7c52-411e-a99d-dbb744537ebe" alt="메인화면" width="250" height="550"/> | <img src="https://github.com/user-attachments/assets/d251da22-61ed-427b-80ce-631f424df9e2" alt="알림목록" width="250" height="550"/> |
 |---------------|---------------|
 | <p align="center">메인 화면</p> | <p align="center">알림 목록</p> |
+
 
 ### 3.2 위험감지 화면 및 녹음 화면
 **위험 감지 화면** <br>
@@ -77,6 +79,7 @@ _위험 발생 시간 확인, 발화위치(지도 및 텍스트), 발화 문장,
 |----------------|----------------|----------------|----------------|
 | <p align="center">위험 감지 화면</p> | <p align="center">녹음 화면</p> | <p align="center">상황 종료 팝업 #1</p> | <p align="center">상황 종료 팝업 #2</p> |
 
+
 ### 3.3 이전 기록 다시 보기 화면
 
 
@@ -86,6 +89,7 @@ _위험 발생 시간 확인, 발화위치(지도 및 텍스트), 발화 문장,
 | <img src="https://github.com/user-attachments/assets/565c2b80-b0f6-47b0-b954-183bf24ed3a9" alt="이전기록" width="450" height="550"/> |
 |---------------|
 | <p align="center">이전 기록 다시 보기 화면 </p> |
+
 
 
 ### 3.4 GPS 화면
