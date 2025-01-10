@@ -34,7 +34,7 @@
 
 ### 개발시 사용한 부품 설명 및 적용 
 - 필요한 부품
-- 부품 조립 후 최종 사진 
+- 부품 조립 후 사진 
 - 적용 방법 참고 사이트
 
 
@@ -53,12 +53,9 @@
 
 
 ------------------------------------------------
-**최종 단말기 개발 완료 및 착용 사진**
+**최종 단말기 개발 완료 사진**
 
-<img src="https://github.com/user-attachments/assets/cd2ba33e-4324-48e3-b63f-e25bf35f7d55"  width="500" height="300"/>
-
-
-
+- 
 
 <img src="https://github.com/user-attachments/assets/70962858-9c5e-4720-96e8-9acc6fc646f0"  width="400" height="300"/>
 
@@ -66,7 +63,9 @@
 --------------------------------------------------
 **최종 단말기 착용 사진** 
 
+- 보드의 크기에 맞춰 인체에 부착 하기 위해 벨트 형식으로 개발 진행 함 
 
+<img src="https://github.com/user-attachments/assets/488479ff-1be0-4b67-9084-1a0c1968e3f9"  width="300" height="300"/>
 
 
 --------------------------------------------------
@@ -312,11 +311,18 @@ dmesg                   # 부팅 및 커널 메시지 확인
     - 구매사이트 : <a href="https://www.icbanq.com/P008890303?utm_source=google&utm_medium=cpc&utm_campaign=%EC%87%BC%ED%95%91_%EC%A2%85%ED%95%A9&utm_id=%EC%87%BC%ED%95%91_%EC%A2%85%ED%95%A9&utm_term=notset&utm_content=%EC%87%BC%ED%95%91_%EC%A2%85%ED%95%A9&gad_source=1&gclid=CjwKCAiAm-67BhBlEiwAEVftNv5RHoXcFabAq3g__s4Hs3WGbJ2BSN4SGltQBqX32d5kHumnV80bwBoCJTUQAvD_BwE">쿨링 케이스 추천</a>
 
 
-### 2) 부품 조립 후 최종 사진 
+### 2) 부품 조립 후  사진 
 
 <img src="https://github.com/user-attachments/assets/70962858-9c5e-4720-96e8-9acc6fc646f0"  width="400" height="300"/>
+
+
+- 충전 모듈 및, GPS 센서, 쿨링 팬 설치 된 최종 보드 사진 
+<br> 
+<br> 
+
 <img src="https://github.com/user-attachments/assets/154d7e51-22e2-44b6-95ca-ac5e447e2ff5"  width="400" height="300"/>
 
+- 충전 모듈 조립 후 완성 사진 
 
   
 ### 3) 적용 방법 참고 사이트
