@@ -55,7 +55,8 @@
 ------------------------------------------------
 **최종 단말기 개발 완료 사진**
 
-- 
+- 충전 모듈 및, GPS 센서, 쿨링 팬 설치 된 최종 보드 사진 
+
 
 <img src="https://github.com/user-attachments/assets/70962858-9c5e-4720-96e8-9acc6fc646f0"  width="400" height="300"/>
 
@@ -66,6 +67,12 @@
 - 보드의 크기에 맞춰 인체에 부착 하기 위해 벨트 형식으로 개발 진행 함 
 
 <img src="https://github.com/user-attachments/assets/488479ff-1be0-4b67-9084-1a0c1968e3f9"  width="300" height="300"/>
+
+<img src="https://github.com/user-attachments/assets/1cca9848-616d-4c6c-b36c-8b1cdd5d5169"  width="400" height="300"/>
+
+
+
+
 
 
 --------------------------------------------------
@@ -305,7 +312,7 @@ dmesg                   # 부팅 및 커널 메시지 확인
   - <배터리>
     - 구매 사이트 :  <a href="https://www.devicemart.co.kr/goods/view?no=10889448"> 18650 보호회로 리튬이온 충전지(배터리)/2000mA </a>
 
-  - <쿨링 케이스>
+  - <쿨링 케이스> <br>
     //튼튼하고 좋았던 케이스 쿨링팬이 두개나 들어가있어서 열회전률이 좋다. 최종 사진에는 사용하지않았음. <br>
     
     - 구매사이트 : <a href="https://www.icbanq.com/P008890303?utm_source=google&utm_medium=cpc&utm_campaign=%EC%87%BC%ED%95%91_%EC%A2%85%ED%95%A9&utm_id=%EC%87%BC%ED%95%91_%EC%A2%85%ED%95%A9&utm_term=notset&utm_content=%EC%87%BC%ED%95%91_%EC%A2%85%ED%95%A9&gad_source=1&gclid=CjwKCAiAm-67BhBlEiwAEVftNv5RHoXcFabAq3g__s4Hs3WGbJ2BSN4SGltQBqX32d5kHumnV80bwBoCJTUQAvD_BwE">쿨링 케이스 추천</a>
@@ -313,16 +320,23 @@ dmesg                   # 부팅 및 커널 메시지 확인
 
 ### 2) 부품 조립 후  사진 
 
-<img src="https://github.com/user-attachments/assets/70962858-9c5e-4720-96e8-9acc6fc646f0"  width="400" height="300"/>
+<img src="https://github.com/user-attachments/assets/2391accf-6f26-4ee9-ae67-8f21f45865db"  width="400" height="300"/>
+<br> 
+- 라즈베리파이 베이직 키트 + gps 센서 조립 사진 
 
-
-- 충전 모듈 및, GPS 센서, 쿨링 팬 설치 된 최종 보드 사진 
 <br> 
 <br> 
 
 <img src="https://github.com/user-attachments/assets/154d7e51-22e2-44b6-95ca-ac5e447e2ff5"  width="400" height="300"/>
 
-- 충전 모듈 조립 후 완성 사진 
+- 충전 모듈과 마이크 조립 사진 
+
+<br> 
+<br> 
+
+<img src="https://github.com/user-attachments/assets/70962858-9c5e-4720-96e8-9acc6fc646f0"  width="400" height="300"/><br>
+- 최종 단말기 사진 
+
 
   
 ### 3) 적용 방법 참고 사이트
