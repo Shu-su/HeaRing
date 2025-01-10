@@ -1,5 +1,11 @@
-# 헤아Ring - [ HW ]  🌱 라즈베리파이4 단말기 개발 
+# 헤아Ring - [ HW ]  <img src="https://github.com/user-attachments/assets/9e733bda-5f85-4df4-9f66-af22c18c754d"  width="50" height="50"/> 라즈베리파이4 단말기 개발 
+
+
 <img src="https://github.com/user-attachments/assets/0009cea5-94c5-41cd-b9d5-d48be550fa03"  width="400" height="300"/>
+
+
+
+
 
 ## <목차>
 ### 1.[개요](#1-개요) <br>
