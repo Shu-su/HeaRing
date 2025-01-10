@@ -121,15 +121,7 @@
 │  │  │     │  ├─ kotlin
 │  │  │     │  └─ res
 │  │  │     └─ profile
-│  │  │        └─ AndroidManifest.xml
-│  │  ├─ build.gradle
-│  │  ├─ gradle.properties
-│  │  ├─ gradle
-│  │  ├─ gradlew
-│  │  ├─ gradlew.bat
-│  │  ├─ local.properties
-│  │  ├─ settings.gradle
-│  │  └─ test_hearing_android.iml
+│  │  └─       └─ AndroidManifest.xml
 │  ├─ assets
 │  │  ├─ background.jpg : 스플래시 배경색
 │  │  └─ logo.png : 헤아Ring 로고 아이콘
