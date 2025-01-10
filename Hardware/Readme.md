@@ -109,14 +109,14 @@
 ## 2. 개발 전 원격제어 환경 구성 
 
 -  보드 환경 설정 
-### 1). SD 카드 환경설정 
+### 1) SD 카드 환경설정 
   - RaspberryImager 어플리케이션에서 64Bit OS 설치 진행
 <img src="https://github.com/user-attachments/assets/e4d4dcf7-9a37-4db1-af6b-70ce49265895"  width="550" height="300"/>
 
   - Ctrl + Shift + X 키를 통해 OS의 아이디와 비밀번호를 설정하고, 연결할 네트워크의 아이디를 설정
 
 
-### 2). putty 연결
+### 2) putty 연결
 - 전원 연결 후 작성한 네트워크 설정했던 내용을 기반으로 네트워크 연결을 통해 보드의 IP 주소를 알아내기
   - 기존 Raspberrypi imager 을 설치 후 작성 했던 네트워크 아이디와 같은 네트워크를 연결 한다.
   - 연결 된 네트워크의 IP주소를 확인 한다
