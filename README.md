@@ -177,7 +177,7 @@
 │           │  ├─ joinPage.dart : 회원가입 화면
 │           │  └─ loginPage.dart : 로그인 화면
 │           └─ theme
-│              └─ MyColors.dart : 사용된 색깔 코드 저장 코드
+│              └─ MyColors.dart : 화면 개발에 쓰인 색상 코드
 ├─ Hardware
 │  ├─ Readme.md 
 │  └─ raspberrypi.py : 라즈베리파이 탑재 소스코드
