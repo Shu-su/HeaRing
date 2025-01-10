@@ -1,5 +1,13 @@
 # 헤아Ring - [ HW ]  <img src="https://github.com/user-attachments/assets/9e733bda-5f85-4df4-9f66-af22c18c754d"  width="50" height="50"/> 라즈베리파이4 단말기 개발 
 
+![](https://img.shields.io/badge/Raspberry%20Pi-A22846?style=for-the-badge&logo=Raspberry%20Pi&logoColor=white)
+![](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black)
+![](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![](https://img.shields.io/badge/Amazon_AWS-232F3E?style=for-the-badge&logo=amazon-aws&logoColor=white)
+![](https://img.shields.io/badge/Visual_Studio_Code-0078D4?style=for-the-badge&logo=visual%20studio%20code&logoColor=white)
+![](https://img.shields.io/badge/numpy-%23013243.svg?style=for-the-badge&logo=numpy&logoColor=white)
+
+
 
 <img src="https://github.com/user-attachments/assets/0009cea5-94c5-41cd-b9d5-d48be550fa03"  width="400" height="300"/>
 
