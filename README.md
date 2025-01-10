@@ -37,8 +37,7 @@
 <헤아Ring>은 **치매 환자의 발화 패턴을 학습한 AI 음성 분석 모델을 통해 환자의 위험 가능성을 실시간으로 판단하는 시스템**입니다. 환자의 발화가 감지되면 자동으로 녹음 후 이를 분석하여, 위험으로 판정된 내용과 위치·시간 정보를 보호자에게 전송합니다. 이를 통해 보호자가 실종이나 위험 상황을 조기에 파악할 수 있도록 지원합니다. <헤아Ring>은‘경고를 울린다(Ring)'와 '환자 및 보호자의 마음을 헤아린다'는 의미를 담은 이름이며, 치매 환자의 안전을 지키고자 합니다. 
 <br><br>
 
-<img width='100%' src='https://github.com/user-attachments/assets/a0867eed-8417-44aa-acbc-fbfea5477624'>
-
+<img width='100%' src='https://github.com/user-attachments/assets/ed93d71e-0657-4fd0-af1b-0ab24d1ae556'>
 
 
 ## Demo 🎞️
