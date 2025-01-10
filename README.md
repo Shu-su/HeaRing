@@ -161,7 +161,7 @@
 │  └─ pubspec.yaml : 프로젝트 설정 파일
 ├─ Hardware
 │  ├─ Readme.md 
-│  └─ raspberrypi.py : 개발 소스코드
+│  └─ raspberrypi.py : 라즈베리파이 탑재 소스코드
 └─ README.md
 ```
 
