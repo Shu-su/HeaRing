@@ -1,4 +1,4 @@
-# 헤아Ring - [ HW ] Readme 🌱 라즈베리파이4 기반 프로젝트 개발과정 
+# 헤아Ring - [ HW ]  🌱 라즈베리파이4 단말기 개발 
 <img src="https://github.com/user-attachments/assets/0009cea5-94c5-41cd-b9d5-d48be550fa03"  width="400" height="300"/>
 
 ## <목차>
