@@ -166,6 +166,19 @@
 │  │     ├─ main_notificationlist.dart
 │  │     └─ main_widget.dart
 │  └─ pubspec.yaml : 프로젝트 설정 파일
+│  └─ 회원가입 및 로그인 : 회원가입 로그인 화면단 개발 폴더
+│     ├─ Readme.md
+│     └─ lib
+│        ├─ main.dart
+│        └─ src
+│           ├─ app.dart
+│           ├─ init 
+│           │  ├─ init_start_page.dart : 처음 시작 화면
+│           │  ├─ joinComplete.dart : 회원가입 완료 화면
+│           │  ├─ joinPage.dart : 회원가입 화면
+│           │  └─ loginPage.dart : 로그인 화면
+│           └─ theme
+│              └─ MyColors.dart : 사용된 색깔 코드 저장 코드
 ├─ Hardware
 │  ├─ Readme.md 
 │  └─ raspberrypi.py : 라즈베리파이 탑재 소스코드
