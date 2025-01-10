@@ -10,15 +10,15 @@
 <br>
 
 - `app/src/debug/AndroidManifest.xml`에 다음 코드를 작성하여 **카메라 권한을 요청**합니다.
-  - ```
+```
     <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.hearing">
     <uses-permission android:name="android.permission.INTERNET"/>
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
-  </manifest>
-
+</manifest>
+```
 
 ## 2. 화면 구성 
 
