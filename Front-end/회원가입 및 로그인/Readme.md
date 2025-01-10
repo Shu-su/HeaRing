@@ -45,7 +45,7 @@
 
 | <img src="https://github.com/user-attachments/assets/2af7a246-7f50-4a2e-ad73-c4b31ef4b3ef" alt="회원가입-1단계" width="250" height="500"/> | <img src="https://github.com/user-attachments/assets/b88ead87-8a06-4c25-b711-d5563d9d67fe" alt="회원가입-2단계" width="250" height="500"/> | <img src="https://github.com/user-attachments/assets/7a5d316e-0c2c-4011-9813-c7ad0a375154" alt="회원가입-2단계-생년월일" width="250" height="500"/> |<img src="https://github.com/user-attachments/assets/54f04b46-c799-4d77-9d3d-6fee361543b6" alt="회원가입-2단계-안전범위" width="250" height="500"/> |
 |---------------|---------------|---------------|---------------|
-| <p align="center">회원가입1 - 계정정보 입력</p> | <p align="center">회원가입2 - 상세정보 입력</p> | <p align="center">회원가입2 - 생년월일</p> | <p align="center">회원가입2 - 안전범위 선택</p> |
+| <p align="center">회원가입1 - 계정정보 입력</p> | <p align="center">회원가입2 - 상세정보 입력</p> | <p align="center">회원가입2 #생년월일</p> | <p align="center">회원가입2 #안전범위 선택</p> |
 
 <br><br>
 
