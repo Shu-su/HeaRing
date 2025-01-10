@@ -45,7 +45,12 @@
 
 
 ------------------------------------------------
-**최종 단말기 개발 완료 사진**
+**최종 단말기 개발 완료 및 착용 사진**
+
+<img src="https://github.com/user-attachments/assets/cd2ba33e-4324-48e3-b63f-e25bf35f7d55"  width="500" height="300"/>
+
+
+
 
 <img src="https://github.com/user-attachments/assets/70962858-9c5e-4720-96e8-9acc6fc646f0"  width="400" height="300"/>
 
