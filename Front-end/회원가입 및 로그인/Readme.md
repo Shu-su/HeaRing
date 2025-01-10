@@ -1,4 +1,7 @@
 # 헤아Ring - [ Front-end ] 회원가입 및 로그인 개발
+![Android Studio](https://img.shields.io/badge/Android_Studio-3DDC84?style=for-the-badge&logo=android-studio&logoColor=white)
+![Flutter](https://img.shields.io/badge/Flutter-02569B?style=for-the-badge&logo=flutter&logoColor=white)
+![Dart](https://img.shields.io/badge/Dart-0175C2?style=for-the-badge&logo=dart&logoColor=white)
 
 현재 회원가입, 로그인은 화면단만 개발이 완료된 상태입니다. <br><br>
 
